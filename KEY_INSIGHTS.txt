@@ -1,0 +1,55 @@
+======================================================================
+KEY INSIGHTS FROM RECESSION INDICATORS ANALYSIS
+======================================================================
+
+HYPOTHESIS 1: Does Consumer Behavior Follow the 'Lipstick Effect'?
+----------------------------------------------------------------------
+[REJECTED] Traditional Lipstick Index shows NO significant relationship
+   - R-squared: 0.0037% (essentially zero)
+   - P-value: 0.9238 (not significant)
+[SUPPORTED] 7 out of 7 other indicators ARE significant
+   - Average R-squared: 9.75%
+   - Conclusion: The 'lipstick' has evolved to fashion trends, not cosmetics
+
+HYPOTHESIS 2: How Has 'Treatonomics' Evolved Beyond Traditional Categories?
+----------------------------------------------------------------------
+[CONFIRMED] Modern 'little luxuries' have shifted categories
+   - Accessories: 12.44% avg R² (2 significant indicators)
+   - Fashion Trends: 8.68% avg R² (5 significant indicators)
+   - Beauty & Cosmetics: 0.00% avg R² (0 significant indicators)
+   - Top category: Fashion Trends (strongest predictors)
+   - Bottom category: Beauty & Cosmetics (traditional 'lipstick' failed)
+
+HYPOTHESIS 3: Can Fashion Trends Predict Economic Sentiment?
+----------------------------------------------------------------------
+[STRONGLY SUPPORTED] 7 out of 8 indicators are significant predictors
+
+Top 3 Predictors:
+   1. Mini: 17.42% variance (p=4.85e-12)
+   2. Bigbag: 15.43% variance (p=1.01e-10)
+   3. Indiesleaze: 11.36% variance (p=4.13e-08)
+
+CRITICAL DISCOVERY: Inverse Relationship
+----------------------------------------------------------------------
+All significant indicators show NEGATIVE correlations:
+  - When fashion trend searches INCREASE -> Consumer confidence DECREASES
+  - This contradicts traditional 'Lipstick Effect' theory
+  - Suggests: Search behavior != Purchase behavior
+  - Interpretation: People browse more when anxious, but may not buy
+
+IMPLICATIONS FOR PROJECT
+----------------------------------------------------------------------
+1. Search Trends vs. Purchase Data:
+   - Current analysis uses Google Trends (search behavior)
+   - Need to compare with actual purchase data (retail sales)
+   - This will reveal if browsing translates to buying
+
+2. The 'New Lipstick':
+   - Fashion items (mini skirts, blazers) are stronger than beauty
+   - Accessories (big bags, high heels) show significant relationships
+   - Price point may matter: affordable luxuries dominate
+
+3. Predictive Power:
+   - Mini Skirts: 17.4% variance explained (strongest predictor)
+   - Could serve as leading indicator of economic sentiment
+   - Lag analysis needed to test predictive timing
