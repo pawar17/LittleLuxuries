@@ -1,0 +1,809 @@
+NAICS  Code,Kind of Business,sheet,TOTAL,month_label,sales,observation_date
+446,Health and personal care stores,2025,,Jan. 2025,37464.0,2025-01-01
+44812,Women's clothing stores,2025,,Jan. 2025,2918.0,2025-01-01
+446,Health and personal care stores,2025,,Feb. 2025,38570.0,2025-02-01
+44812,Women's clothing stores,2025,,Feb. 2025,2850.0,2025-02-01
+446,Health and personal care stores,2025,,Mar. 2025,38988.0,2025-03-01
+44812,Women's clothing stores,2025,,Mar. 2025,2923.0,2025-03-01
+446,Health and personal care stores,2025,,Apr. 2025,38881.0,2025-04-01
+44812,Women's clothing stores,2025,,Apr. 2025,2798.0,2025-04-01
+446,Health and personal care stores,2025,,May 2025,39104.0,2025-05-01
+44812,Women's clothing stores,2025,,May 2025,2748.0,2025-05-01
+446,Health and personal care stores,2025,,Jun. 2025,39517.0,2025-06-01
+44812,Women's clothing stores,2025,,Jun. 2025,2798.0,2025-06-01
+446,Health and personal care stores,2025,,Jul. 2025,40182.0,2025-07-01
+44812,Women's clothing stores,2025,,Jul. 2025,2742.0,2025-07-01
+446,Health and personal care stores,2025,,Aug. 2025,40150.0,2025-08-01
+44812,Women's clothing stores,2025,,Aug. 2025,2775.0,2025-08-01
+446,Health and personal care stores,2024,,Jan. 2024,35827.0,2024-01-01
+44812,Women's clothing stores,2024,,Jan. 2024,2808.0,2024-01-01
+446,Health and personal care stores,2024,,Feb. 2024,35765.0,2024-02-01
+44812,Women's clothing stores,2024,,Feb. 2024,2960.0,2024-02-01
+446,Health and personal care stores,2024,,Mar. 2024,35624.0,2024-03-01
+44812,Women's clothing stores,2024,,Mar. 2024,2842.0,2024-03-01
+446,Health and personal care stores,2024,,Apr. 2024,35778.0,2024-04-01
+44812,Women's clothing stores,2024,,Apr. 2024,2875.0,2024-04-01
+446,Health and personal care stores,2024,,May 2024,36028.0,2024-05-01
+44812,Women's clothing stores,2024,,May 2024,2886.0,2024-05-01
+446,Health and personal care stores,2024,,Jun. 2024,36021.0,2024-06-01
+44812,Women's clothing stores,2024,,Jun. 2024,2824.0,2024-06-01
+446,Health and personal care stores,2024,,Jul. 2024,37535.0,2024-07-01
+44812,Women's clothing stores,2024,,Jul. 2024,2859.0,2024-07-01
+446,Health and personal care stores,2024,,Aug. 2024,37678.0,2024-08-01
+44812,Women's clothing stores,2024,,Aug. 2024,2833.0,2024-08-01
+446,Health and personal care stores,2024,,Sep. 2024,38438.0,2024-09-01
+44812,Women's clothing stores,2024,,Sep. 2024,2761.0,2024-09-01
+446,Health and personal care stores,2024,,Oct. 2024,38232.0,2024-10-01
+44812,Women's clothing stores,2024,,Oct. 2024,2785.0,2024-10-01
+446,Health and personal care stores,2024,,Nov. 2024,38085.0,2024-11-01
+44812,Women's clothing stores,2024,,Nov. 2024,2873.0,2024-11-01
+446,Health and personal care stores,2024,,Dec. 2024,37899.0,2024-12-01
+44812,Women's clothing stores,2024,,Dec. 2024,2824.0,2024-12-01
+446,Health and personal care stores,2023,,Jan. 2023,34603.0,2023-01-01
+44812,Women's clothing stores,2023,,Jan. 2023,3013.0,2023-01-01
+446,Health and personal care stores,2023,,Feb. 2023,35070.0,2023-02-01
+44812,Women's clothing stores,2023,,Feb. 2023,2982.0,2023-02-01
+446,Health and personal care stores,2023,,Mar. 2023,35207.0,2023-03-01
+44812,Women's clothing stores,2023,,Mar. 2023,2898.0,2023-03-01
+446,Health and personal care stores,2023,,Apr. 2023,35493.0,2023-04-01
+44812,Women's clothing stores,2023,,Apr. 2023,2914.0,2023-04-01
+446,Health and personal care stores,2023,,May 2023,35745.0,2023-05-01
+44812,Women's clothing stores,2023,,May 2023,2947.0,2023-05-01
+446,Health and personal care stores,2023,,Jun. 2023,35734.0,2023-06-01
+44812,Women's clothing stores,2023,,Jun. 2023,2912.0,2023-06-01
+446,Health and personal care stores,2023,,Jul. 2023,35455.0,2023-07-01
+44812,Women's clothing stores,2023,,Jul. 2023,2986.0,2023-07-01
+446,Health and personal care stores,2023,,Aug. 2023,36097.0,2023-08-01
+44812,Women's clothing stores,2023,,Aug. 2023,2989.0,2023-08-01
+446,Health and personal care stores,2023,,Sep. 2023,36011.0,2023-09-01
+44812,Women's clothing stores,2023,,Sep. 2023,3038.0,2023-09-01
+446,Health and personal care stores,2023,,Oct. 2023,37298.0,2023-10-01
+44812,Women's clothing stores,2023,,Oct. 2023,2997.0,2023-10-01
+446,Health and personal care stores,2023,,Nov. 2023,37150.0,2023-11-01
+44812,Women's clothing stores,2023,,Nov. 2023,2932.0,2023-11-01
+446,Health and personal care stores,2023,,Dec. 2023,36210.0,2023-12-01
+44812,Women's clothing stores,2023,,Dec. 2023,3007.0,2023-12-01
+446,Health and personal care stores,2022,,Jan. 2022,32664.0,2022-01-01
+44812,Women's clothing stores,2022,,Jan. 2022,3050.0,2022-01-01
+446,Health and personal care stores,2022,,Feb. 2022,32416.0,2022-02-01
+44812,Women's clothing stores,2022,,Feb. 2022,3169.0,2022-02-01
+446,Health and personal care stores,2022,,Mar. 2022,32553.0,2022-03-01
+44812,Women's clothing stores,2022,,Mar. 2022,3326.0,2022-03-01
+446,Health and personal care stores,2022,,Apr. 2022,32838.0,2022-04-01
+44812,Women's clothing stores,2022,,Apr. 2022,3212.0,2022-04-01
+446,Health and personal care stores,2022,,May 2022,32656.0,2022-05-01
+44812,Women's clothing stores,2022,,May 2022,3157.0,2022-05-01
+446,Health and personal care stores,2022,,Jun. 2022,33212.0,2022-06-01
+44812,Women's clothing stores,2022,,Jun. 2022,3156.0,2022-06-01
+446,Health and personal care stores,2022,,Jul. 2022,33431.0,2022-07-01
+44812,Women's clothing stores,2022,,Jul. 2022,3033.0,2022-07-01
+446,Health and personal care stores,2022,,Aug. 2022,33318.0,2022-08-01
+44812,Women's clothing stores,2022,,Aug. 2022,3168.0,2022-08-01
+446,Health and personal care stores,2022,,Sep. 2022,33529.0,2022-09-01
+44812,Women's clothing stores,2022,,Sep. 2022,3147.0,2022-09-01
+446,Health and personal care stores,2022,,Oct. 2022,33673.0,2022-10-01
+44812,Women's clothing stores,2022,,Oct. 2022,3111.0,2022-10-01
+446,Health and personal care stores,2022,,Nov. 2022,33896.0,2022-11-01
+44812,Women's clothing stores,2022,,Nov. 2022,3037.0,2022-11-01
+446,Health and personal care stores,2022,,Dec. 2022,33098.0,2022-12-01
+44812,Women's clothing stores,2022,,Dec. 2022,3026.0,2022-12-01
+446,Health and personal care stores,2021,,Jan. 2021,29812.0,2021-01-01
+44812,Women's clothing stores,2021,,Jan. 2021,2804.0,2021-01-01
+446,Health and personal care stores,2021,,Feb. 2021,29636.0,2021-02-01
+44812,Women's clothing stores,2021,,Feb. 2021,2613.0,2021-02-01
+446,Health and personal care stores,2021,,Mar. 2021,32090.0,2021-03-01
+44812,Women's clothing stores,2021,,Mar. 2021,3037.0,2021-03-01
+446,Health and personal care stores,2021,,Apr. 2021,31957.0,2021-04-01
+44812,Women's clothing stores,2021,,Apr. 2021,3045.0,2021-04-01
+446,Health and personal care stores,2021,,May 2021,31321.0,2021-05-01
+44812,Women's clothing stores,2021,,May 2021,3117.0,2021-05-01
+446,Health and personal care stores,2021,,Jun. 2021,32334.0,2021-06-01
+44812,Women's clothing stores,2021,,Jun. 2021,3411.0,2021-06-01
+446,Health and personal care stores,2021,,Jul. 2021,32225.0,2021-07-01
+44812,Women's clothing stores,2021,,Jul. 2021,3370.0,2021-07-01
+446,Health and personal care stores,2021,,Aug. 2021,32429.0,2021-08-01
+44812,Women's clothing stores,2021,,Aug. 2021,3259.0,2021-08-01
+446,Health and personal care stores,2021,,Sep. 2021,32183.0,2021-09-01
+44812,Women's clothing stores,2021,,Sep. 2021,3287.0,2021-09-01
+446,Health and personal care stores,2021,,Oct. 2021,32099.0,2021-10-01
+44812,Women's clothing stores,2021,,Oct. 2021,3213.0,2021-10-01
+446,Health and personal care stores,2021,,Nov. 2021,32490.0,2021-11-01
+44812,Women's clothing stores,2021,,Nov. 2021,3249.0,2021-11-01
+446,Health and personal care stores,2021,,Dec. 2021,32390.0,2021-12-01
+44812,Women's clothing stores,2021,,Dec. 2021,3125.0,2021-12-01
+446,Health and personal care stores,2020,,Jan. 2020,28935.0,2020-01-01
+44812,Women's clothing stores,2020,,Jan. 2020,3211.0,2020-01-01
+446,Health and personal care stores,2020,,Feb. 2020,29230.0,2020-02-01
+44812,Women's clothing stores,2020,,Feb. 2020,3175.0,2020-02-01
+446,Health and personal care stores,2020,,Mar. 2020,30701.0,2020-03-01
+44812,Women's clothing stores,2020,,Mar. 2020,1468.0,2020-03-01
+446,Health and personal care stores,2020,,Apr. 2020,26149.0,2020-04-01
+44812,Women's clothing stores,2020,,Apr. 2020,465.0,2020-04-01
+446,Health and personal care stores,2020,,May 2020,26601.0,2020-05-01
+44812,Women's clothing stores,2020,,May 2020,966.0,2020-05-01
+446,Health and personal care stores,2020,,Jun. 2020,28472.0,2020-06-01
+44812,Women's clothing stores,2020,,Jun. 2020,2120.0,2020-06-01
+446,Health and personal care stores,2020,,Jul. 2020,30081.0,2020-07-01
+44812,Women's clothing stores,2020,,Jul. 2020,2510.0,2020-07-01
+446,Health and personal care stores,2020,,Aug. 2020,29524.0,2020-08-01
+44812,Women's clothing stores,2020,,Aug. 2020,2595.0,2020-08-01
+446,Health and personal care stores,2020,,Sep. 2020,30012.0,2020-09-01
+44812,Women's clothing stores,2020,,Sep. 2020,2782.0,2020-09-01
+446,Health and personal care stores,2020,,Oct. 2020,29987.0,2020-10-01
+44812,Women's clothing stores,2020,,Oct. 2020,2704.0,2020-10-01
+446,Health and personal care stores,2020,,Nov. 2020,29583.0,2020-11-01
+44812,Women's clothing stores,2020,,Nov. 2020,2524.0,2020-11-01
+446,Health and personal care stores,2020,,Dec. 2020,29717.0,2020-12-01
+44812,Women's clothing stores,2020,,Dec. 2020,2611.0,2020-12-01
+446,Health and personal care stores,2019,,Jan. 2019,28419.0,2019-01-01
+44812,Women's clothing stores,2019,,Jan. 2019,3098.0,2019-01-01
+446,Health and personal care stores,2019,,Feb. 2019,28763.0,2019-02-01
+44812,Women's clothing stores,2019,,Feb. 2019,3054.0,2019-02-01
+446,Health and personal care stores,2019,,Mar. 2019,28653.0,2019-03-01
+44812,Women's clothing stores,2019,,Mar. 2019,3112.0,2019-03-01
+446,Health and personal care stores,2019,,Apr. 2019,28584.0,2019-04-01
+44812,Women's clothing stores,2019,,Apr. 2019,3089.0,2019-04-01
+446,Health and personal care stores,2019,,May 2019,28791.0,2019-05-01
+44812,Women's clothing stores,2019,,May 2019,3124.0,2019-05-01
+446,Health and personal care stores,2019,,Jun. 2019,28636.0,2019-06-01
+44812,Women's clothing stores,2019,,Jun. 2019,3066.0,2019-06-01
+446,Health and personal care stores,2019,,Jul. 2019,28497.0,2019-07-01
+44812,Women's clothing stores,2019,,Jul. 2019,3091.0,2019-07-01
+446,Health and personal care stores,2019,,Aug. 2019,28493.0,2019-08-01
+44812,Women's clothing stores,2019,,Aug. 2019,3056.0,2019-08-01
+446,Health and personal care stores,2019,,Sep. 2019,28425.0,2019-09-01
+44812,Women's clothing stores,2019,,Sep. 2019,3097.0,2019-09-01
+446,Health and personal care stores,2019,,Oct. 2019,28704.0,2019-10-01
+44812,Women's clothing stores,2019,,Oct. 2019,3142.0,2019-10-01
+446,Health and personal care stores,2019,,Nov. 2019,28465.0,2019-11-01
+44812,Women's clothing stores,2019,,Nov. 2019,3091.0,2019-11-01
+446,Health and personal care stores,2019,,Dec. 2019,28126.0,2019-12-01
+44812,Women's clothing stores,2019,,Dec. 2019,3146.0,2019-12-01
+446,Health and personal care stores,2018,,Jan. 2018,27252.0,2018-01-01
+44812,Women's clothing stores,2018,,Jan. 2018,3129.0,2018-01-01
+446,Health and personal care stores,2018,,Feb. 2018,27097.0,2018-02-01
+44812,Women's clothing stores,2018,,Feb. 2018,3194.0,2018-02-01
+446,Health and personal care stores,2018,,Mar. 2018,27273.0,2018-03-01
+44812,Women's clothing stores,2018,,Mar. 2018,3087.0,2018-03-01
+446,Health and personal care stores,2018,,Apr. 2018,27542.0,2018-04-01
+44812,Women's clothing stores,2018,,Apr. 2018,3217.0,2018-04-01
+446,Health and personal care stores,2018,,May 2018,28029.0,2018-05-01
+44812,Women's clothing stores,2018,,May 2018,3364.0,2018-05-01
+446,Health and personal care stores,2018,,Jun. 2018,27714.0,2018-06-01
+44812,Women's clothing stores,2018,,Jun. 2018,3212.0,2018-06-01
+446,Health and personal care stores,2018,,Jul. 2018,27854.0,2018-07-01
+44812,Women's clothing stores,2018,,Jul. 2018,3207.0,2018-07-01
+446,Health and personal care stores,2018,,Aug. 2018,28105.0,2018-08-01
+44812,Women's clothing stores,2018,,Aug. 2018,3252.0,2018-08-01
+446,Health and personal care stores,2018,,Sep. 2018,27963.0,2018-09-01
+44812,Women's clothing stores,2018,,Sep. 2018,3246.0,2018-09-01
+446,Health and personal care stores,2018,,Oct. 2018,28240.0,2018-10-01
+44812,Women's clothing stores,2018,,Oct. 2018,3328.0,2018-10-01
+446,Health and personal care stores,2018,,Nov. 2018,28760.0,2018-11-01
+44812,Women's clothing stores,2018,,Nov. 2018,3396.0,2018-11-01
+446,Health and personal care stores,2018,,Dec. 2018,27554.0,2018-12-01
+44812,Women's clothing stores,2018,,Dec. 2018,3132.0,2018-12-01
+446,Health and personal care stores,2017,,Jan. 2017,25711.0,2017-01-01
+44812,Women's clothing stores,2017,,Jan. 2017,3224.0,2017-01-01
+446,Health and personal care stores,2017,,Feb. 2017,26015.0,2017-02-01
+44812,Women's clothing stores,2017,,Feb. 2017,3185.0,2017-02-01
+446,Health and personal care stores,2017,,Mar. 2017,26174.0,2017-03-01
+44812,Women's clothing stores,2017,,Mar. 2017,3135.0,2017-03-01
+446,Health and personal care stores,2017,,Apr. 2017,26376.0,2017-04-01
+44812,Women's clothing stores,2017,,Apr. 2017,3226.0,2017-04-01
+446,Health and personal care stores,2017,,May 2017,26452.0,2017-05-01
+44812,Women's clothing stores,2017,,May 2017,3128.0,2017-05-01
+446,Health and personal care stores,2017,,Jun. 2017,26668.0,2017-06-01
+44812,Women's clothing stores,2017,,Jun. 2017,3208.0,2017-06-01
+446,Health and personal care stores,2017,,Jul. 2017,26714.0,2017-07-01
+44812,Women's clothing stores,2017,,Jul. 2017,3192.0,2017-07-01
+446,Health and personal care stores,2017,,Aug. 2017,26985.0,2017-08-01
+44812,Women's clothing stores,2017,,Aug. 2017,3141.0,2017-08-01
+446,Health and personal care stores,2017,,Sep. 2017,27068.0,2017-09-01
+44812,Women's clothing stores,2017,,Sep. 2017,3111.0,2017-09-01
+446,Health and personal care stores,2017,,Oct. 2017,27240.0,2017-10-01
+44812,Women's clothing stores,2017,,Oct. 2017,3143.0,2017-10-01
+446,Health and personal care stores,2017,,Nov. 2017,27385.0,2017-11-01
+44812,Women's clothing stores,2017,,Nov. 2017,3154.0,2017-11-01
+446,Health and personal care stores,2017,,Dec. 2017,27236.0,2017-12-01
+44812,Women's clothing stores,2017,,Dec. 2017,3147.0,2017-12-01
+446,Health and personal care stores,2016,,Jan. 2016,25587.0,2016-01-01
+44812,Women's clothing stores,2016,,Jan. 2016,3292.0,2016-01-01
+446,Health and personal care stores,2016,,Feb. 2016,26116.0,2016-02-01
+44812,Women's clothing stores,2016,,Feb. 2016,3360.0,2016-02-01
+446,Health and personal care stores,2016,,Mar. 2016,25974.0,2016-03-01
+44812,Women's clothing stores,2016,,Mar. 2016,3309.0,2016-03-01
+446,Health and personal care stores,2016,,Apr. 2016,26170.0,2016-04-01
+44812,Women's clothing stores,2016,,Apr. 2016,3264.0,2016-04-01
+446,Health and personal care stores,2016,,May 2016,26146.0,2016-05-01
+44812,Women's clothing stores,2016,,May 2016,3246.0,2016-05-01
+446,Health and personal care stores,2016,,Jun. 2016,26256.0,2016-06-01
+44812,Women's clothing stores,2016,,Jun. 2016,3258.0,2016-06-01
+446,Health and personal care stores,2016,,Jul. 2016,26250.0,2016-07-01
+44812,Women's clothing stores,2016,,Jul. 2016,3203.0,2016-07-01
+446,Health and personal care stores,2016,,Aug. 2016,26147.0,2016-08-01
+44812,Women's clothing stores,2016,,Aug. 2016,3339.0,2016-08-01
+446,Health and personal care stores,2016,,Sep. 2016,26166.0,2016-09-01
+44812,Women's clothing stores,2016,,Sep. 2016,3240.0,2016-09-01
+446,Health and personal care stores,2016,,Oct. 2016,25356.0,2016-10-01
+44812,Women's clothing stores,2016,,Oct. 2016,3170.0,2016-10-01
+446,Health and personal care stores,2016,,Nov. 2016,25604.0,2016-11-01
+44812,Women's clothing stores,2016,,Nov. 2016,3186.0,2016-11-01
+446,Health and personal care stores,2016,,Dec. 2016,25687.0,2016-12-01
+44812,Women's clothing stores,2016,,Dec. 2016,3156.0,2016-12-01
+446,Health and personal care stores,2015,,Jan. 2015,24857.0,2015-01-01
+44812,Women's clothing stores,2015,,Jan. 2015,3339.0,2015-01-01
+446,Health and personal care stores,2015,,Feb. 2015,24629.0,2015-02-01
+44812,Women's clothing stores,2015,,Feb. 2015,3291.0,2015-02-01
+446,Health and personal care stores,2015,,Mar. 2015,25209.0,2015-03-01
+44812,Women's clothing stores,2015,,Mar. 2015,3291.0,2015-03-01
+446,Health and personal care stores,2015,,Apr. 2015,24774.0,2015-04-01
+44812,Women's clothing stores,2015,,Apr. 2015,3240.0,2015-04-01
+446,Health and personal care stores,2015,,May 2015,24747.0,2015-05-01
+44812,Women's clothing stores,2015,,May 2015,3331.0,2015-05-01
+446,Health and personal care stores,2015,,Jun. 2015,24913.0,2015-06-01
+44812,Women's clothing stores,2015,,Jun. 2015,3290.0,2015-06-01
+446,Health and personal care stores,2015,,Jul. 2015,25141.0,2015-07-01
+44812,Women's clothing stores,2015,,Jul. 2015,3307.0,2015-07-01
+446,Health and personal care stores,2015,,Aug. 2015,25292.0,2015-08-01
+44812,Women's clothing stores,2015,,Aug. 2015,3367.0,2015-08-01
+446,Health and personal care stores,2015,,Sep. 2015,25608.0,2015-09-01
+44812,Women's clothing stores,2015,,Sep. 2015,3264.0,2015-09-01
+446,Health and personal care stores,2015,,Oct. 2015,25419.0,2015-10-01
+44812,Women's clothing stores,2015,,Oct. 2015,3301.0,2015-10-01
+446,Health and personal care stores,2015,,Nov. 2015,25556.0,2015-11-01
+44812,Women's clothing stores,2015,,Nov. 2015,3264.0,2015-11-01
+446,Health and personal care stores,2015,,Dec. 2015,25784.0,2015-12-01
+44812,Women's clothing stores,2015,,Dec. 2015,3358.0,2015-12-01
+446,Health and personal care stores,2014,,Jan. 2014,23344.0,2014-01-01
+44812,Women's clothing stores,2014,,Jan. 2014,3304.0,2014-01-01
+446,Health and personal care stores,2014,,Feb. 2014,23458.0,2014-02-01
+44812,Women's clothing stores,2014,,Feb. 2014,3340.0,2014-02-01
+446,Health and personal care stores,2014,,Mar. 2014,23590.0,2014-03-01
+44812,Women's clothing stores,2014,,Mar. 2014,3336.0,2014-03-01
+446,Health and personal care stores,2014,,Apr. 2014,23780.0,2014-04-01
+44812,Women's clothing stores,2014,,Apr. 2014,3346.0,2014-04-01
+446,Health and personal care stores,2014,,May 2014,24112.0,2014-05-01
+44812,Women's clothing stores,2014,,May 2014,3344.0,2014-05-01
+446,Health and personal care stores,2014,,Jun. 2014,24297.0,2014-06-01
+44812,Women's clothing stores,2014,,Jun. 2014,3305.0,2014-06-01
+446,Health and personal care stores,2014,,Jul. 2014,24321.0,2014-07-01
+44812,Women's clothing stores,2014,,Jul. 2014,3343.0,2014-07-01
+446,Health and personal care stores,2014,,Aug. 2014,24398.0,2014-08-01
+44812,Women's clothing stores,2014,,Aug. 2014,3397.0,2014-08-01
+446,Health and personal care stores,2014,,Sep. 2014,24505.0,2014-09-01
+44812,Women's clothing stores,2014,,Sep. 2014,3353.0,2014-09-01
+446,Health and personal care stores,2014,,Oct. 2014,24410.0,2014-10-01
+44812,Women's clothing stores,2014,,Oct. 2014,3360.0,2014-10-01
+446,Health and personal care stores,2014,,Nov. 2014,24514.0,2014-11-01
+44812,Women's clothing stores,2014,,Nov. 2014,3405.0,2014-11-01
+446,Health and personal care stores,2014,,Dec. 2014,24662.0,2014-12-01
+44812,Women's clothing stores,2014,,Dec. 2014,3464.0,2014-12-01
+446,Health and personal care stores,2013,,Jan. 2013,22832.0,2013-01-01
+44812,Women's clothing stores,2013,,Jan. 2013,3576.0,2013-01-01
+446,Health and personal care stores,2013,,Feb. 2013,22660.0,2013-02-01
+44812,Women's clothing stores,2013,,Feb. 2013,3322.0,2013-02-01
+446,Health and personal care stores,2013,,Mar. 2013,22690.0,2013-03-01
+44812,Women's clothing stores,2013,,Mar. 2013,3367.0,2013-03-01
+446,Health and personal care stores,2013,,Apr. 2013,22595.0,2013-04-01
+44812,Women's clothing stores,2013,,Apr. 2013,3371.0,2013-04-01
+446,Health and personal care stores,2013,,May 2013,22692.0,2013-05-01
+44812,Women's clothing stores,2013,,May 2013,3388.0,2013-05-01
+446,Health and personal care stores,2013,,Jun. 2013,22661.0,2013-06-01
+44812,Women's clothing stores,2013,,Jun. 2013,3367.0,2013-06-01
+446,Health and personal care stores,2013,,Jul. 2013,22904.0,2013-07-01
+44812,Women's clothing stores,2013,,Jul. 2013,3428.0,2013-07-01
+446,Health and personal care stores,2013,,Aug. 2013,22926.0,2013-08-01
+44812,Women's clothing stores,2013,,Aug. 2013,3422.0,2013-08-01
+446,Health and personal care stores,2013,,Sep. 2013,23318.0,2013-09-01
+44812,Women's clothing stores,2013,,Sep. 2013,3428.0,2013-09-01
+446,Health and personal care stores,2013,,Oct. 2013,23340.0,2013-10-01
+44812,Women's clothing stores,2013,,Oct. 2013,3414.0,2013-10-01
+446,Health and personal care stores,2013,,Nov. 2013,23337.0,2013-11-01
+44812,Women's clothing stores,2013,,Nov. 2013,3356.0,2013-11-01
+446,Health and personal care stores,2013,,Dec. 2013,23385.0,2013-12-01
+44812,Women's clothing stores,2013,,Dec. 2013,3361.0,2013-12-01
+446,Health and personal care stores,2012,,Jan. 2012,22716.0,2012-01-01
+44812,Women's clothing stores,2012,,Jan. 2012,3449.0,2012-01-01
+446,Health and personal care stores,2012,,Feb. 2012,22709.0,2012-02-01
+44812,Women's clothing stores,2012,,Feb. 2012,3480.0,2012-02-01
+446,Health and personal care stores,2012,,Mar. 2012,22696.0,2012-03-01
+44812,Women's clothing stores,2012,,Mar. 2012,3514.0,2012-03-01
+446,Health and personal care stores,2012,,Apr. 2012,22774.0,2012-04-01
+44812,Women's clothing stores,2012,,Apr. 2012,3396.0,2012-04-01
+446,Health and personal care stores,2012,,May 2012,22591.0,2012-05-01
+44812,Women's clothing stores,2012,,May 2012,3377.0,2012-05-01
+446,Health and personal care stores,2012,,Jun. 2012,22164.0,2012-06-01
+44812,Women's clothing stores,2012,,Jun. 2012,3419.0,2012-06-01
+446,Health and personal care stores,2012,,Jul. 2012,22505.0,2012-07-01
+44812,Women's clothing stores,2012,,Jul. 2012,3386.0,2012-07-01
+446,Health and personal care stores,2012,,Aug. 2012,22442.0,2012-08-01
+44812,Women's clothing stores,2012,,Aug. 2012,3303.0,2012-08-01
+446,Health and personal care stores,2012,,Sep. 2012,22292.0,2012-09-01
+44812,Women's clothing stores,2012,,Sep. 2012,3420.0,2012-09-01
+446,Health and personal care stores,2012,,Oct. 2012,22197.0,2012-10-01
+44812,Women's clothing stores,2012,,Oct. 2012,3440.0,2012-10-01
+446,Health and personal care stores,2012,,Nov. 2012,22345.0,2012-11-01
+44812,Women's clothing stores,2012,,Nov. 2012,3405.0,2012-11-01
+446,Health and personal care stores,2012,,Dec. 2012,22561.0,2012-12-01
+44812,Women's clothing stores,2012,,Dec. 2012,3355.0,2012-12-01
+446,Health and personal care stores,2011,,Jan. 2011,22421.0,2011-01-01
+44812,Women's clothing stores,2011,,Jan. 2011,3136.0,2011-01-01
+446,Health and personal care stores,2011,,Feb. 2011,22169.0,2011-02-01
+44812,Women's clothing stores,2011,,Feb. 2011,3254.0,2011-02-01
+446,Health and personal care stores,2011,,Mar. 2011,22275.0,2011-03-01
+44812,Women's clothing stores,2011,,Mar. 2011,3232.0,2011-03-01
+446,Health and personal care stores,2011,,Apr. 2011,22162.0,2011-04-01
+44812,Women's clothing stores,2011,,Apr. 2011,3242.0,2011-04-01
+446,Health and personal care stores,2011,,May 2011,22327.0,2011-05-01
+44812,Women's clothing stores,2011,,May 2011,3255.0,2011-05-01
+446,Health and personal care stores,2011,,Jun. 2011,22323.0,2011-06-01
+44812,Women's clothing stores,2011,,Jun. 2011,3366.0,2011-06-01
+446,Health and personal care stores,2011,,Jul. 2011,22442.0,2011-07-01
+44812,Women's clothing stores,2011,,Jul. 2011,3300.0,2011-07-01
+446,Health and personal care stores,2011,,Aug. 2011,22543.0,2011-08-01
+44812,Women's clothing stores,2011,,Aug. 2011,3108.0,2011-08-01
+446,Health and personal care stores,2011,,Sep. 2011,22444.0,2011-09-01
+44812,Women's clothing stores,2011,,Sep. 2011,3319.0,2011-09-01
+446,Health and personal care stores,2011,,Oct. 2011,22569.0,2011-10-01
+44812,Women's clothing stores,2011,,Oct. 2011,3261.0,2011-10-01
+446,Health and personal care stores,2011,,Nov. 2011,22484.0,2011-11-01
+44812,Women's clothing stores,2011,,Nov. 2011,3303.0,2011-11-01
+446,Health and personal care stores,2011,,Dec. 2011,22422.0,2011-12-01
+44812,Women's clothing stores,2011,,Dec. 2011,3368.0,2011-12-01
+446,Health and personal care stores,2010,,Jan. 2010,20917.0,2010-01-01
+44812,Women's clothing stores,2010,,Jan. 2010,2996.0,2010-01-01
+446,Health and personal care stores,2010,,Feb. 2010,20942.0,2010-02-01
+44812,Women's clothing stores,2010,,Feb. 2010,2955.0,2010-02-01
+446,Health and personal care stores,2010,,Mar. 2010,21090.0,2010-03-01
+44812,Women's clothing stores,2010,,Mar. 2010,3086.0,2010-03-01
+446,Health and personal care stores,2010,,Apr. 2010,21206.0,2010-04-01
+44812,Women's clothing stores,2010,,Apr. 2010,3063.0,2010-04-01
+446,Health and personal care stores,2010,,May 2010,21146.0,2010-05-01
+44812,Women's clothing stores,2010,,May 2010,3043.0,2010-05-01
+446,Health and personal care stores,2010,,Jun. 2010,21400.0,2010-06-01
+44812,Women's clothing stores,2010,,Jun. 2010,3049.0,2010-06-01
+446,Health and personal care stores,2010,,Jul. 2010,21487.0,2010-07-01
+44812,Women's clothing stores,2010,,Jul. 2010,3038.0,2010-07-01
+446,Health and personal care stores,2010,,Aug. 2010,21594.0,2010-08-01
+44812,Women's clothing stores,2010,,Aug. 2010,3067.0,2010-08-01
+446,Health and personal care stores,2010,,Sep. 2010,21634.0,2010-09-01
+44812,Women's clothing stores,2010,,Sep. 2010,3115.0,2010-09-01
+446,Health and personal care stores,2010,,Oct. 2010,21833.0,2010-10-01
+44812,Women's clothing stores,2010,,Oct. 2010,3149.0,2010-10-01
+446,Health and personal care stores,2010,,Nov. 2010,21914.0,2010-11-01
+44812,Women's clothing stores,2010,,Nov. 2010,3169.0,2010-11-01
+446,Health and personal care stores,2010,,Dec. 2010,22002.0,2010-12-01
+44812,Women's clothing stores,2010,,Dec. 2010,3152.0,2010-12-01
+446,Health and personal care stores,2009,,Jan. 2009,20486.0,2009-01-01
+44812,Women's clothing stores,2009,,Jan. 2009,2899.0,2009-01-01
+446,Health and personal care stores,2009,,Feb. 2009,20639.0,2009-02-01
+44812,Women's clothing stores,2009,,Feb. 2009,2921.0,2009-02-01
+446,Health and personal care stores,2009,,Mar. 2009,20661.0,2009-03-01
+44812,Women's clothing stores,2009,,Mar. 2009,2859.0,2009-03-01
+446,Health and personal care stores,2009,,Apr. 2009,20797.0,2009-04-01
+44812,Women's clothing stores,2009,,Apr. 2009,2981.0,2009-04-01
+446,Health and personal care stores,2009,,May 2009,20853.0,2009-05-01
+44812,Women's clothing stores,2009,,May 2009,2970.0,2009-05-01
+446,Health and personal care stores,2009,,Jun. 2009,20801.0,2009-06-01
+44812,Women's clothing stores,2009,,Jun. 2009,2936.0,2009-06-01
+446,Health and personal care stores,2009,,Jul. 2009,20753.0,2009-07-01
+44812,Women's clothing stores,2009,,Jul. 2009,2934.0,2009-07-01
+446,Health and personal care stores,2009,,Aug. 2009,20815.0,2009-08-01
+44812,Women's clothing stores,2009,,Aug. 2009,3044.0,2009-08-01
+446,Health and personal care stores,2009,,Sep. 2009,20955.0,2009-09-01
+44812,Women's clothing stores,2009,,Sep. 2009,2994.0,2009-09-01
+446,Health and personal care stores,2009,,Oct. 2009,21012.0,2009-10-01
+44812,Women's clothing stores,2009,,Oct. 2009,2993.0,2009-10-01
+446,Health and personal care stores,2009,,Nov. 2009,21045.0,2009-11-01
+44812,Women's clothing stores,2009,,Nov. 2009,2967.0,2009-11-01
+446,Health and personal care stores,2009,,Dec. 2009,20951.0,2009-12-01
+44812,Women's clothing stores,2009,,Dec. 2009,2882.0,2009-12-01
+446,Health and personal care stores,2008,,Jan. 2008,19857.0,2008-01-01
+44812,Women's clothing stores,2008,,Jan. 2008,3202.0,2008-01-01
+446,Health and personal care stores,2008,,Feb. 2008,20024.0,2008-02-01
+44812,Women's clothing stores,2008,,Feb. 2008,3229.0,2008-02-01
+446,Health and personal care stores,2008,,Mar. 2008,20059.0,2008-03-01
+44812,Women's clothing stores,2008,,Mar. 2008,3218.0,2008-03-01
+446,Health and personal care stores,2008,,Apr. 2008,19892.0,2008-04-01
+44812,Women's clothing stores,2008,,Apr. 2008,3237.0,2008-04-01
+446,Health and personal care stores,2008,,May 2008,20282.0,2008-05-01
+44812,Women's clothing stores,2008,,May 2008,3228.0,2008-05-01
+446,Health and personal care stores,2008,,Jun. 2008,20270.0,2008-06-01
+44812,Women's clothing stores,2008,,Jun. 2008,3220.0,2008-06-01
+446,Health and personal care stores,2008,,Jul. 2008,20373.0,2008-07-01
+44812,Women's clothing stores,2008,,Jul. 2008,3228.0,2008-07-01
+446,Health and personal care stores,2008,,Aug. 2008,20347.0,2008-08-01
+44812,Women's clothing stores,2008,,Aug. 2008,3218.0,2008-08-01
+446,Health and personal care stores,2008,,Sep. 2008,20387.0,2008-09-01
+44812,Women's clothing stores,2008,,Sep. 2008,3140.0,2008-09-01
+446,Health and personal care stores,2008,,Oct. 2008,20358.0,2008-10-01
+44812,Women's clothing stores,2008,,Oct. 2008,3008.0,2008-10-01
+446,Health and personal care stores,2008,,Nov. 2008,20495.0,2008-11-01
+44812,Women's clothing stores,2008,,Nov. 2008,2978.0,2008-11-01
+446,Health and personal care stores,2008,,Dec. 2008,20457.0,2008-12-01
+44812,Women's clothing stores,2008,,Dec. 2008,2854.0,2008-12-01
+446,Health and personal care stores,2007,,Jan. 2007,19188.0,2007-01-01
+44812,Women's clothing stores,2007,,Jan. 2007,3334.0,2007-01-01
+446,Health and personal care stores,2007,,Feb. 2007,19135.0,2007-02-01
+44812,Women's clothing stores,2007,,Feb. 2007,3292.0,2007-02-01
+446,Health and personal care stores,2007,,Mar. 2007,19259.0,2007-03-01
+44812,Women's clothing stores,2007,,Mar. 2007,3325.0,2007-03-01
+446,Health and personal care stores,2007,,Apr. 2007,19316.0,2007-04-01
+44812,Women's clothing stores,2007,,Apr. 2007,3310.0,2007-04-01
+446,Health and personal care stores,2007,,May 2007,19350.0,2007-05-01
+44812,Women's clothing stores,2007,,May 2007,3440.0,2007-05-01
+446,Health and personal care stores,2007,,Jun. 2007,19579.0,2007-06-01
+44812,Women's clothing stores,2007,,Jun. 2007,3367.0,2007-06-01
+446,Health and personal care stores,2007,,Jul. 2007,19549.0,2007-07-01
+44812,Women's clothing stores,2007,,Jul. 2007,3062.0,2007-07-01
+446,Health and personal care stores,2007,,Aug. 2007,19718.0,2007-08-01
+44812,Women's clothing stores,2007,,Aug. 2007,3304.0,2007-08-01
+446,Health and personal care stores,2007,,Sep. 2007,19851.0,2007-09-01
+44812,Women's clothing stores,2007,,Sep. 2007,3260.0,2007-09-01
+446,Health and personal care stores,2007,,Oct. 2007,19726.0,2007-10-01
+44812,Women's clothing stores,2007,,Oct. 2007,3285.0,2007-10-01
+446,Health and personal care stores,2007,,Nov. 2007,19705.0,2007-11-01
+44812,Women's clothing stores,2007,,Nov. 2007,3277.0,2007-11-01
+446,Health and personal care stores,2007,,Dec. 2007,19691.0,2007-12-01
+44812,Women's clothing stores,2007,,Dec. 2007,3263.0,2007-12-01
+446,Health and personal care stores,2006,,Jan. 2006,17831.0,2006-01-01
+44812,Women's clothing stores,2006,,Jan. 2006,3178.0,2006-01-01
+446,Health and personal care stores,2006,,Feb. 2006,17879.0,2006-02-01
+44812,Women's clothing stores,2006,,Feb. 2006,3080.0,2006-02-01
+446,Health and personal care stores,2006,,Mar. 2006,17995.0,2006-03-01
+44812,Women's clothing stores,2006,,Mar. 2006,3096.0,2006-03-01
+446,Health and personal care stores,2006,,Apr. 2006,18087.0,2006-04-01
+44812,Women's clothing stores,2006,,Apr. 2006,3138.0,2006-04-01
+446,Health and personal care stores,2006,,May 2006,18271.0,2006-05-01
+44812,Women's clothing stores,2006,,May 2006,3109.0,2006-05-01
+446,Health and personal care stores,2006,,Jun. 2006,18364.0,2006-06-01
+44812,Women's clothing stores,2006,,Jun. 2006,3158.0,2006-06-01
+446,Health and personal care stores,2006,,Jul. 2006,18444.0,2006-07-01
+44812,Women's clothing stores,2006,,Jul. 2006,3224.0,2006-07-01
+446,Health and personal care stores,2006,,Aug. 2006,18517.0,2006-08-01
+44812,Women's clothing stores,2006,,Aug. 2006,3088.0,2006-08-01
+446,Health and personal care stores,2006,,Sep. 2006,18683.0,2006-09-01
+44812,Women's clothing stores,2006,,Sep. 2006,3209.0,2006-09-01
+446,Health and personal care stores,2006,,Oct. 2006,18834.0,2006-10-01
+44812,Women's clothing stores,2006,,Oct. 2006,3190.0,2006-10-01
+446,Health and personal care stores,2006,,Nov. 2006,19048.0,2006-11-01
+44812,Women's clothing stores,2006,,Nov. 2006,3167.0,2006-11-01
+446,Health and personal care stores,2006,,Dec. 2006,19280.0,2006-12-01
+44812,Women's clothing stores,2006,,Dec. 2006,3372.0,2006-12-01
+446,Health and personal care stores,2005,,Jan. 2005,16999.0,2005-01-01
+44812,Women's clothing stores,2005,,Jan. 2005,2937.0,2005-01-01
+446,Health and personal care stores,2005,,Feb. 2005,17085.0,2005-02-01
+44812,Women's clothing stores,2005,,Feb. 2005,2981.0,2005-02-01
+446,Health and personal care stores,2005,,Mar. 2005,17038.0,2005-03-01
+44812,Women's clothing stores,2005,,Mar. 2005,2936.0,2005-03-01
+446,Health and personal care stores,2005,,Apr. 2005,17143.0,2005-04-01
+44812,Women's clothing stores,2005,,Apr. 2005,2995.0,2005-04-01
+446,Health and personal care stores,2005,,May 2005,17241.0,2005-05-01
+44812,Women's clothing stores,2005,,May 2005,2977.0,2005-05-01
+446,Health and personal care stores,2005,,Jun. 2005,17187.0,2005-06-01
+44812,Women's clothing stores,2005,,Jun. 2005,3063.0,2005-06-01
+446,Health and personal care stores,2005,,Jul. 2005,17441.0,2005-07-01
+44812,Women's clothing stores,2005,,Jul. 2005,2987.0,2005-07-01
+446,Health and personal care stores,2005,,Aug. 2005,17357.0,2005-08-01
+44812,Women's clothing stores,2005,,Aug. 2005,3033.0,2005-08-01
+446,Health and personal care stores,2005,,Sep. 2005,17493.0,2005-09-01
+44812,Women's clothing stores,2005,,Sep. 2005,3023.0,2005-09-01
+446,Health and personal care stores,2005,,Oct. 2005,17562.0,2005-10-01
+44812,Women's clothing stores,2005,,Oct. 2005,3092.0,2005-10-01
+446,Health and personal care stores,2005,,Nov. 2005,17619.0,2005-11-01
+44812,Women's clothing stores,2005,,Nov. 2005,3111.0,2005-11-01
+446,Health and personal care stores,2005,,Dec. 2005,17824.0,2005-12-01
+44812,Women's clothing stores,2005,,Dec. 2005,3101.0,2005-12-01
+446,Health and personal care stores,2004,,Jan. 2004,16187.0,2004-01-01
+44812,Women's clothing stores,2004,,Jan. 2004,2794.0,2004-01-01
+446,Health and personal care stores,2004,,Feb. 2004,15914.0,2004-02-01
+44812,Women's clothing stores,2004,,Feb. 2004,2835.0,2004-02-01
+446,Health and personal care stores,2004,,Mar. 2004,16250.0,2004-03-01
+44812,Women's clothing stores,2004,,Mar. 2004,2858.0,2004-03-01
+446,Health and personal care stores,2004,,Apr. 2004,16284.0,2004-04-01
+44812,Women's clothing stores,2004,,Apr. 2004,2791.0,2004-04-01
+446,Health and personal care stores,2004,,May 2004,16302.0,2004-05-01
+44812,Women's clothing stores,2004,,May 2004,2825.0,2004-05-01
+446,Health and personal care stores,2004,,Jun. 2004,16360.0,2004-06-01
+44812,Women's clothing stores,2004,,Jun. 2004,2807.0,2004-06-01
+446,Health and personal care stores,2004,,Jul. 2004,16375.0,2004-07-01
+44812,Women's clothing stores,2004,,Jul. 2004,2795.0,2004-07-01
+446,Health and personal care stores,2004,,Aug. 2004,16428.0,2004-08-01
+44812,Women's clothing stores,2004,,Aug. 2004,2794.0,2004-08-01
+446,Health and personal care stores,2004,,Sep. 2004,16414.0,2004-09-01
+44812,Women's clothing stores,2004,,Sep. 2004,2873.0,2004-09-01
+446,Health and personal care stores,2004,,Oct. 2004,16588.0,2004-10-01
+44812,Women's clothing stores,2004,,Oct. 2004,2920.0,2004-10-01
+446,Health and personal care stores,2004,,Nov. 2004,16572.0,2004-11-01
+44812,Women's clothing stores,2004,,Nov. 2004,2895.0,2004-11-01
+446,Health and personal care stores,2004,,Dec. 2004,16681.0,2004-12-01
+44812,Women's clothing stores,2004,,Dec. 2004,2919.0,2004-12-01
+446,Health and personal care stores,2003,,Jan. 2003,15313.0,2003-01-01
+44812,Women's clothing stores,2003,,Jan. 2003,2593.0,2003-01-01
+446,Health and personal care stores,2003,,Feb. 2003,15350.0,2003-02-01
+44812,Women's clothing stores,2003,,Feb. 2003,2521.0,2003-02-01
+446,Health and personal care stores,2003,,Mar. 2003,15486.0,2003-03-01
+44812,Women's clothing stores,2003,,Mar. 2003,2560.0,2003-03-01
+446,Health and personal care stores,2003,,Apr. 2003,15527.0,2003-04-01
+44812,Women's clothing stores,2003,,Apr. 2003,2542.0,2003-04-01
+446,Health and personal care stores,2003,,May 2003,15646.0,2003-05-01
+44812,Women's clothing stores,2003,,May 2003,2568.0,2003-05-01
+446,Health and personal care stores,2003,,Jun. 2003,15733.0,2003-06-01
+44812,Women's clothing stores,2003,,Jun. 2003,2617.0,2003-06-01
+446,Health and personal care stores,2003,,Jul. 2003,15957.0,2003-07-01
+44812,Women's clothing stores,2003,,Jul. 2003,2691.0,2003-07-01
+446,Health and personal care stores,2003,,Aug. 2003,16146.0,2003-08-01
+44812,Women's clothing stores,2003,,Aug. 2003,2671.0,2003-08-01
+446,Health and personal care stores,2003,,Sep. 2003,16194.0,2003-09-01
+44812,Women's clothing stores,2003,,Sep. 2003,2724.0,2003-09-01
+446,Health and personal care stores,2003,,Oct. 2003,16219.0,2003-10-01
+44812,Women's clothing stores,2003,,Oct. 2003,2732.0,2003-10-01
+446,Health and personal care stores,2003,,Nov. 2003,16330.0,2003-11-01
+44812,Women's clothing stores,2003,,Nov. 2003,2764.0,2003-11-01
+446,Health and personal care stores,2003,,Dec. 2003,16421.0,2003-12-01
+44812,Women's clothing stores,2003,,Dec. 2003,2844.0,2003-12-01
+446,Health and personal care stores,2002,,Jan. 2002,14339.0,2002-01-01
+44812,Women's clothing stores,2002,,Jan. 2002,2566.0,2002-01-01
+446,Health and personal care stores,2002,,Feb. 2002,14550.0,2002-02-01
+44812,Women's clothing stores,2002,,Feb. 2002,2610.0,2002-02-01
+446,Health and personal care stores,2002,,Mar. 2002,14646.0,2002-03-01
+44812,Women's clothing stores,2002,,Mar. 2002,2604.0,2002-03-01
+446,Health and personal care stores,2002,,Apr. 2002,14705.0,2002-04-01
+44812,Women's clothing stores,2002,,Apr. 2002,2571.0,2002-04-01
+446,Health and personal care stores,2002,,May 2002,14734.0,2002-05-01
+44812,Women's clothing stores,2002,,May 2002,2531.0,2002-05-01
+446,Health and personal care stores,2002,,Jun. 2002,14809.0,2002-06-01
+44812,Women's clothing stores,2002,,Jun. 2002,2527.0,2002-06-01
+446,Health and personal care stores,2002,,Jul. 2002,14815.0,2002-07-01
+44812,Women's clothing stores,2002,,Jul. 2002,2494.0,2002-07-01
+446,Health and personal care stores,2002,,Aug. 2002,14963.0,2002-08-01
+44812,Women's clothing stores,2002,,Aug. 2002,2544.0,2002-08-01
+446,Health and personal care stores,2002,,Sep. 2002,15152.0,2002-09-01
+44812,Women's clothing stores,2002,,Sep. 2002,2484.0,2002-09-01
+446,Health and personal care stores,2002,,Oct. 2002,15067.0,2002-10-01
+44812,Women's clothing stores,2002,,Oct. 2002,2486.0,2002-10-01
+446,Health and personal care stores,2002,,Nov. 2002,15229.0,2002-11-01
+44812,Women's clothing stores,2002,,Nov. 2002,2524.0,2002-11-01
+446,Health and personal care stores,2002,,Dec. 2002,15104.0,2002-12-01
+44812,Women's clothing stores,2002,,Dec. 2002,2643.0,2002-12-01
+446,Health and personal care stores,2001,,Jan. 2001,13235.0,2001-01-01
+44812,Women's clothing stores,2001,,Jan. 2001,2593.0,2001-01-01
+446,Health and personal care stores,2001,,Feb. 2001,13421.0,2001-02-01
+44812,Women's clothing stores,2001,,Feb. 2001,2639.0,2001-02-01
+446,Health and personal care stores,2001,,Mar. 2001,13496.0,2001-03-01
+44812,Women's clothing stores,2001,,Mar. 2001,2553.0,2001-03-01
+446,Health and personal care stores,2001,,Apr. 2001,13518.0,2001-04-01
+44812,Women's clothing stores,2001,,Apr. 2001,2642.0,2001-04-01
+446,Health and personal care stores,2001,,May 2001,13639.0,2001-05-01
+44812,Women's clothing stores,2001,,May 2001,2517.0,2001-05-01
+446,Health and personal care stores,2001,,Jun. 2001,13727.0,2001-06-01
+44812,Women's clothing stores,2001,,Jun. 2001,2511.0,2001-06-01
+446,Health and personal care stores,2001,,Jul. 2001,13724.0,2001-07-01
+44812,Women's clothing stores,2001,,Jul. 2001,2546.0,2001-07-01
+446,Health and personal care stores,2001,,Aug. 2001,13831.0,2001-08-01
+44812,Women's clothing stores,2001,,Aug. 2001,2667.0,2001-08-01
+446,Health and personal care stores,2001,,Sep. 2001,13802.0,2001-09-01
+44812,Women's clothing stores,2001,,Sep. 2001,2459.0,2001-09-01
+446,Health and personal care stores,2001,,Oct. 2001,14105.0,2001-10-01
+44812,Women's clothing stores,2001,,Oct. 2001,2596.0,2001-10-01
+446,Health and personal care stores,2001,,Nov. 2001,14105.0,2001-11-01
+44812,Women's clothing stores,2001,,Nov. 2001,2573.0,2001-11-01
+446,Health and personal care stores,2001,,Dec. 2001,14184.0,2001-12-01
+44812,Women's clothing stores,2001,,Dec. 2001,2581.0,2001-12-01
+446,Health and personal care stores,2000,,Jan. 2000,12246.0,2000-01-01
+44812,Women's clothing stores,2000,,Jan. 2000,2280.0,2000-01-01
+446,Health and personal care stores,2000,,Feb. 2000,12194.0,2000-02-01
+44812,Women's clothing stores,2000,,Feb. 2000,2394.0,2000-02-01
+446,Health and personal care stores,2000,,Mar. 2000,12403.0,2000-03-01
+44812,Women's clothing stores,2000,,Mar. 2000,2600.0,2000-03-01
+446,Health and personal care stores,2000,,Apr. 2000,12626.0,2000-04-01
+44812,Women's clothing stores,2000,,Apr. 2000,2519.0,2000-04-01
+446,Health and personal care stores,2000,,May 2000,12655.0,2000-05-01
+44812,Women's clothing stores,2000,,May 2000,2594.0,2000-05-01
+446,Health and personal care stores,2000,,Jun. 2000,12711.0,2000-06-01
+44812,Women's clothing stores,2000,,Jun. 2000,2575.0,2000-06-01
+446,Health and personal care stores,2000,,Jul. 2000,12845.0,2000-07-01
+44812,Women's clothing stores,2000,,Jul. 2000,2588.0,2000-07-01
+446,Health and personal care stores,2000,,Aug. 2000,12874.0,2000-08-01
+44812,Women's clothing stores,2000,,Aug. 2000,2629.0,2000-08-01
+446,Health and personal care stores,2000,,Sep. 2000,13149.0,2000-09-01
+44812,Women's clothing stores,2000,,Sep. 2000,2675.0,2000-09-01
+446,Health and personal care stores,2000,,Oct. 2000,13116.0,2000-10-01
+44812,Women's clothing stores,2000,,Oct. 2000,2642.0,2000-10-01
+446,Health and personal care stores,2000,,Nov. 2000,13194.0,2000-11-01
+44812,Women's clothing stores,2000,,Nov. 2000,2629.0,2000-11-01
+446,Health and personal care stores,2000,,Dec. 2000,13414.0,2000-12-01
+44812,Women's clothing stores,2000,,Dec. 2000,2570.0,2000-12-01
+446,Health and personal care stores,1999,,Jan. 1999,11322.0,1999-01-01
+44812,Women's clothing stores,1999,,Jan. 1999,2359.0,1999-01-01
+446,Health and personal care stores,1999,,Feb. 1999,11347.0,1999-02-01
+44812,Women's clothing stores,1999,,Feb. 1999,2395.0,1999-02-01
+446,Health and personal care stores,1999,,Mar. 1999,11451.0,1999-03-01
+44812,Women's clothing stores,1999,,Mar. 1999,2465.0,1999-03-01
+446,Health and personal care stores,1999,,Apr. 1999,11449.0,1999-04-01
+44812,Women's clothing stores,1999,,Apr. 1999,2466.0,1999-04-01
+446,Health and personal care stores,1999,,May 1999,11624.0,1999-05-01
+44812,Women's clothing stores,1999,,May 1999,2480.0,1999-05-01
+446,Health and personal care stores,1999,,Jun. 1999,11695.0,1999-06-01
+44812,Women's clothing stores,1999,,Jun. 1999,2434.0,1999-06-01
+446,Health and personal care stores,1999,,Jul. 1999,11740.0,1999-07-01
+44812,Women's clothing stores,1999,,Jul. 1999,2421.0,1999-07-01
+446,Health and personal care stores,1999,,Aug. 1999,11705.0,1999-08-01
+44812,Women's clothing stores,1999,,Aug. 1999,2413.0,1999-08-01
+446,Health and personal care stores,1999,,Sep. 1999,11840.0,1999-09-01
+44812,Women's clothing stores,1999,,Sep. 1999,2394.0,1999-09-01
+446,Health and personal care stores,1999,,Oct. 1999,12037.0,1999-10-01
+44812,Women's clothing stores,1999,,Oct. 1999,2375.0,1999-10-01
+446,Health and personal care stores,1999,,Nov. 1999,12094.0,1999-11-01
+44812,Women's clothing stores,1999,,Nov. 1999,2380.0,1999-11-01
+446,Health and personal care stores,1999,,Dec. 1999,12624.0,1999-12-01
+44812,Women's clothing stores,1999,,Dec. 1999,2391.0,1999-12-01
+446,Health and personal care stores,1998,,Jan. 1998,10302.0,1998-01-01
+44812,Women's clothing stores,1998,,Jan. 1998,2322.0,1998-01-01
+446,Health and personal care stores,1998,,Feb. 1998,10271.0,1998-02-01
+44812,Women's clothing stores,1998,,Feb. 1998,2272.0,1998-02-01
+446,Health and personal care stores,1998,,Mar. 1998,10247.0,1998-03-01
+44812,Women's clothing stores,1998,,Mar. 1998,2226.0,1998-03-01
+446,Health and personal care stores,1998,,Apr. 1998,10480.0,1998-04-01
+44812,Women's clothing stores,1998,,Apr. 1998,2380.0,1998-04-01
+446,Health and personal care stores,1998,,May 1998,10553.0,1998-05-01
+44812,Women's clothing stores,1998,,May 1998,2293.0,1998-05-01
+446,Health and personal care stores,1998,,Jun. 1998,10534.0,1998-06-01
+44812,Women's clothing stores,1998,,Jun. 1998,2282.0,1998-06-01
+446,Health and personal care stores,1998,,Jul. 1998,10706.0,1998-07-01
+44812,Women's clothing stores,1998,,Jul. 1998,2365.0,1998-07-01
+446,Health and personal care stores,1998,,Aug. 1998,10942.0,1998-08-01
+44812,Women's clothing stores,1998,,Aug. 1998,2318.0,1998-08-01
+446,Health and personal care stores,1998,,Sep. 1998,10831.0,1998-09-01
+44812,Women's clothing stores,1998,,Sep. 1998,2272.0,1998-09-01
+446,Health and personal care stores,1998,,Oct. 1998,10987.0,1998-10-01
+44812,Women's clothing stores,1998,,Oct. 1998,2325.0,1998-10-01
+446,Health and personal care stores,1998,,Nov. 1998,11094.0,1998-11-01
+44812,Women's clothing stores,1998,,Nov. 1998,2367.0,1998-11-01
+446,Health and personal care stores,1998,,Dec. 1998,11166.0,1998-12-01
+44812,Women's clothing stores,1998,,Dec. 1998,2364.0,1998-12-01
+446,Health and personal care stores,1997,,Jan. 1997,9347.0,1997-01-01
+44812,Women's clothing stores,1997,,Jan. 1997,2353.0,1997-01-01
+446,Health and personal care stores,1997,,Feb. 1997,9546.0,1997-02-01
+44812,Women's clothing stores,1997,,Feb. 1997,2346.0,1997-02-01
+446,Health and personal care stores,1997,,Mar. 1997,9861.0,1997-03-01
+44812,Women's clothing stores,1997,,Mar. 1997,2333.0,1997-03-01
+446,Health and personal care stores,1997,,Apr. 1997,9432.0,1997-04-01
+44812,Women's clothing stores,1997,,Apr. 1997,2202.0,1997-04-01
+446,Health and personal care stores,1997,,May 1997,9637.0,1997-05-01
+44812,Women's clothing stores,1997,,May 1997,2199.0,1997-05-01
+446,Health and personal care stores,1997,,Jun. 1997,9804.0,1997-06-01
+44812,Women's clothing stores,1997,,Jun. 1997,2249.0,1997-06-01
+446,Health and personal care stores,1997,,Jul. 1997,9827.0,1997-07-01
+44812,Women's clothing stores,1997,,Jul. 1997,2256.0,1997-07-01
+446,Health and personal care stores,1997,,Aug. 1997,9876.0,1997-08-01
+44812,Women's clothing stores,1997,,Aug. 1997,2292.0,1997-08-01
+446,Health and personal care stores,1997,,Sep. 1997,9987.0,1997-09-01
+44812,Women's clothing stores,1997,,Sep. 1997,2296.0,1997-09-01
+446,Health and personal care stores,1997,,Oct. 1997,9947.0,1997-10-01
+44812,Women's clothing stores,1997,,Oct. 1997,2287.0,1997-10-01
+446,Health and personal care stores,1997,,Nov. 1997,10119.0,1997-11-01
+44812,Women's clothing stores,1997,,Nov. 1997,2279.0,1997-11-01
+446,Health and personal care stores,1997,,Dec. 1997,10080.0,1997-12-01
+44812,Women's clothing stores,1997,,Dec. 1997,2298.0,1997-12-01
+446,Health and personal care stores,1996,,Jan. 1996,8456.0,1996-01-01
+44812,Women's clothing stores,1996,,Jan. 1996,2225.0,1996-01-01
+446,Health and personal care stores,1996,,Feb. 1996,8669.0,1996-02-01
+44812,Women's clothing stores,1996,,Feb. 1996,2301.0,1996-02-01
+446,Health and personal care stores,1996,,Mar. 1996,8920.0,1996-03-01
+44812,Women's clothing stores,1996,,Mar. 1996,2202.0,1996-03-01
+446,Health and personal care stores,1996,,Apr. 1996,8798.0,1996-04-01
+44812,Women's clothing stores,1996,,Apr. 1996,2305.0,1996-04-01
+446,Health and personal care stores,1996,,May 1996,8982.0,1996-05-01
+44812,Women's clothing stores,1996,,May 1996,2355.0,1996-05-01
+446,Health and personal care stores,1996,,Jun. 1996,9003.0,1996-06-01
+44812,Women's clothing stores,1996,,Jun. 1996,2401.0,1996-06-01
+446,Health and personal care stores,1996,,Jul. 1996,9023.0,1996-07-01
+44812,Women's clothing stores,1996,,Jul. 1996,2255.0,1996-07-01
+446,Health and personal care stores,1996,,Aug. 1996,9137.0,1996-08-01
+44812,Women's clothing stores,1996,,Aug. 1996,2282.0,1996-08-01
+446,Health and personal care stores,1996,,Sep. 1996,9113.0,1996-09-01
+44812,Women's clothing stores,1996,,Sep. 1996,2336.0,1996-09-01
+446,Health and personal care stores,1996,,Oct. 1996,9251.0,1996-10-01
+44812,Women's clothing stores,1996,,Oct. 1996,2344.0,1996-10-01
+446,Health and personal care stores,1996,,Nov. 1996,9345.0,1996-11-01
+44812,Women's clothing stores,1996,,Nov. 1996,2317.0,1996-11-01
+446,Health and personal care stores,1996,,Dec. 1996,9392.0,1996-12-01
+44812,Women's clothing stores,1996,,Dec. 1996,2341.0,1996-12-01
+446,Health and personal care stores,1995,,Jan. 1995,8211.0,1995-01-01
+44812,Women's clothing stores,1995,,Jan. 1995,2474.0,1995-01-01
+446,Health and personal care stores,1995,,Feb. 1995,8217.0,1995-02-01
+44812,Women's clothing stores,1995,,Feb. 1995,2382.0,1995-02-01
+446,Health and personal care stores,1995,,Mar. 1995,8206.0,1995-03-01
+44812,Women's clothing stores,1995,,Mar. 1995,2433.0,1995-03-01
+446,Health and personal care stores,1995,,Apr. 1995,8374.0,1995-04-01
+44812,Women's clothing stores,1995,,Apr. 1995,2386.0,1995-04-01
+446,Health and personal care stores,1995,,May 1995,8321.0,1995-05-01
+44812,Women's clothing stores,1995,,May 1995,2387.0,1995-05-01
+446,Health and personal care stores,1995,,Jun. 1995,8390.0,1995-06-01
+44812,Women's clothing stores,1995,,Jun. 1995,2367.0,1995-06-01
+446,Health and personal care stores,1995,,Jul. 1995,8351.0,1995-07-01
+44812,Women's clothing stores,1995,,Jul. 1995,2381.0,1995-07-01
+446,Health and personal care stores,1995,,Aug. 1995,8383.0,1995-08-01
+44812,Women's clothing stores,1995,,Aug. 1995,2296.0,1995-08-01
+446,Health and personal care stores,1995,,Sep. 1995,8552.0,1995-09-01
+44812,Women's clothing stores,1995,,Sep. 1995,2360.0,1995-09-01
+446,Health and personal care stores,1995,,Oct. 1995,8483.0,1995-10-01
+44812,Women's clothing stores,1995,,Oct. 1995,2278.0,1995-10-01
+446,Health and personal care stores,1995,,Nov. 1995,8593.0,1995-11-01
+44812,Women's clothing stores,1995,,Nov. 1995,2307.0,1995-11-01
+446,Health and personal care stores,1995,,Dec. 1995,8664.0,1995-12-01
+44812,Women's clothing stores,1995,,Dec. 1995,2285.0,1995-12-01
+446,Health and personal care stores,1994,,Jan. 1994,7806.0,1994-01-01
+44812,Women's clothing stores,1994,,Jan. 1994,2548.0,1994-01-01
+446,Health and personal care stores,1994,,Feb. 1994,7648.0,1994-02-01
+44812,Women's clothing stores,1994,,Feb. 1994,2608.0,1994-02-01
+446,Health and personal care stores,1994,,Mar. 1994,7829.0,1994-03-01
+44812,Women's clothing stores,1994,,Mar. 1994,2574.0,1994-03-01
+446,Health and personal care stores,1994,,Apr. 1994,7764.0,1994-04-01
+44812,Women's clothing stores,1994,,Apr. 1994,2520.0,1994-04-01
+446,Health and personal care stores,1994,,May 1994,7856.0,1994-05-01
+44812,Women's clothing stores,1994,,May 1994,2422.0,1994-05-01
+446,Health and personal care stores,1994,,Jun. 1994,7926.0,1994-06-01
+44812,Women's clothing stores,1994,,Jun. 1994,2513.0,1994-06-01
+446,Health and personal care stores,1994,,Jul. 1994,8005.0,1994-07-01
+44812,Women's clothing stores,1994,,Jul. 1994,2435.0,1994-07-01
+446,Health and personal care stores,1994,,Aug. 1994,8048.0,1994-08-01
+44812,Women's clothing stores,1994,,Aug. 1994,2532.0,1994-08-01
+446,Health and personal care stores,1994,,Sep. 1994,8086.0,1994-09-01
+44812,Women's clothing stores,1994,,Sep. 1994,2420.0,1994-09-01
+446,Health and personal care stores,1994,,Oct. 1994,8134.0,1994-10-01
+44812,Women's clothing stores,1994,,Oct. 1994,2519.0,1994-10-01
+446,Health and personal care stores,1994,,Nov. 1994,8103.0,1994-11-01
+44812,Women's clothing stores,1994,,Nov. 1994,2494.0,1994-11-01
+446,Health and personal care stores,1994,,Dec. 1994,8173.0,1994-12-01
+44812,Women's clothing stores,1994,,Dec. 1994,2505.0,1994-12-01
+446,Health and personal care stores,1993,,Jan. 1993,7437.0,1993-01-01
+44812,Women's clothing stores,1993,,Jan. 1993,2959.0,1993-01-01
+446,Health and personal care stores,1993,,Feb. 1993,7566.0,1993-02-01
+44812,Women's clothing stores,1993,,Feb. 1993,2668.0,1993-02-01
+446,Health and personal care stores,1993,,Mar. 1993,7509.0,1993-03-01
+44812,Women's clothing stores,1993,,Mar. 1993,2540.0,1993-03-01
+446,Health and personal care stores,1993,,Apr. 1993,7595.0,1993-04-01
+44812,Women's clothing stores,1993,,Apr. 1993,2670.0,1993-04-01
+446,Health and personal care stores,1993,,May 1993,7591.0,1993-05-01
+44812,Women's clothing stores,1993,,May 1993,2713.0,1993-05-01
+446,Health and personal care stores,1993,,Jun. 1993,7599.0,1993-06-01
+44812,Women's clothing stores,1993,,Jun. 1993,2640.0,1993-06-01
+446,Health and personal care stores,1993,,Jul. 1993,7672.0,1993-07-01
+44812,Women's clothing stores,1993,,Jul. 1993,2719.0,1993-07-01
+446,Health and personal care stores,1993,,Aug. 1993,7610.0,1993-08-01
+44812,Women's clothing stores,1993,,Aug. 1993,2626.0,1993-08-01
+446,Health and personal care stores,1993,,Sep. 1993,7673.0,1993-09-01
+44812,Women's clothing stores,1993,,Sep. 1993,2669.0,1993-09-01
+446,Health and personal care stores,1993,,Oct. 1993,7686.0,1993-10-01
+44812,Women's clothing stores,1993,,Oct. 1993,2623.0,1993-10-01
+446,Health and personal care stores,1993,,Nov. 1993,7692.0,1993-11-01
+44812,Women's clothing stores,1993,,Nov. 1993,2608.0,1993-11-01
+446,Health and personal care stores,1993,,Dec. 1993,7851.0,1993-12-01
+44812,Women's clothing stores,1993,,Dec. 1993,2553.0,1993-12-01
+446,Health and personal care stores,1992,,Jan. 1992,7313.0,1992-01-01
+44812,Women's clothing stores,1992,,Jan. 1992,2602.0,1992-01-01
+446,Health and personal care stores,1992,,Feb. 1992,7364.0,1992-02-01
+44812,Women's clothing stores,1992,,Feb. 1992,2548.0,1992-02-01
+446,Health and personal care stores,1992,,Mar. 1992,7356.0,1992-03-01
+44812,Women's clothing stores,1992,,Mar. 1992,2512.0,1992-03-01
+446,Health and personal care stores,1992,,Apr. 1992,7423.0,1992-04-01
+44812,Women's clothing stores,1992,,Apr. 1992,2610.0,1992-04-01
+446,Health and personal care stores,1992,,May 1992,7395.0,1992-05-01
+44812,Women's clothing stores,1992,,May 1992,2566.0,1992-05-01
+446,Health and personal care stores,1992,,Jun. 1992,7323.0,1992-06-01
+44812,Women's clothing stores,1992,,Jun. 1992,2526.0,1992-06-01
+446,Health and personal care stores,1992,,Jul. 1992,7194.0,1992-07-01
+44812,Women's clothing stores,1992,,Jul. 1992,2573.0,1992-07-01
+446,Health and personal care stores,1992,,Aug. 1992,7471.0,1992-08-01
+44812,Women's clothing stores,1992,,Aug. 1992,2641.0,1992-08-01
+446,Health and personal care stores,1992,,Sep. 1992,7322.0,1992-09-01
+44812,Women's clothing stores,1992,,Sep. 1992,2613.0,1992-09-01
+446,Health and personal care stores,1992,,Oct. 1992,7452.0,1992-10-01
+44812,Women's clothing stores,1992,,Oct. 1992,2628.0,1992-10-01
+446,Health and personal care stores,1992,,Nov. 1992,7410.0,1992-11-01
+44812,Women's clothing stores,1992,,Nov. 1992,2660.0,1992-11-01
+446,Health and personal care stores,1992,,Dec. 1992,7371.0,1992-12-01
+44812,Women's clothing stores,1992,,Dec. 1992,2710.0,1992-12-01

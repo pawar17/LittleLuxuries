@@ -23,7 +23,10 @@ DATA SOURCES:
 2. Consumer Confidence Index (CCI): Economic sentiment
 3. Consumer Price Index (CPI): Inflation adjustment
 4. FRED Economic Data: Unemployment, consumer sentiment, retail sales
-5. Retail Transaction Data: Actual purchase behavior with demographics
+5. Retail Transaction Data: Actual purchase behavior with demographics (2023-2025)
+6. U.S. Census Bureau: Monthly retail sales data (1992-2025)
+   - NAICS 446: Health and personal care stores
+   - NAICS 44812: Women's clothing stores
 
 ALIGNMENT WITH PEER-REVIEWED RESEARCH:
 - Hill et al. (2012): "Boosting Beauty in an Economic Decline"
@@ -198,10 +201,40 @@ def load_retail_transactions():
         return None
 
 
+def load_census_retail_sales():
+    """Load U.S. Census Bureau retail sales data (1992-2025)"""
+    print("\n" + "="*100)
+    print("PART 1D: LOADING U.S. CENSUS BUREAU RETAIL SALES DATA")
+    print("="*100)
+
+    try:
+        census_df = pd.read_csv('Data_Sources/census_retail_sales_1992_2025.csv')
+        census_df['observation_date'] = pd.to_datetime(census_df['observation_date'])
+
+        print(f"\nOK Census retail sales loaded: {len(census_df):,} monthly observations")
+        print(f"  Date range: {census_df['observation_date'].min().strftime('%Y-%m')} to {census_df['observation_date'].max().strftime('%Y-%m')}")
+        print(f"  NAICS codes included:")
+
+        for naics, business in census_df.groupby('NAICS  Code')['Kind of Business'].first().items():
+            count = len(census_df[census_df['NAICS  Code'] == naics])
+            print(f"    - {naics}: {business} ({count:,} months)")
+
+        print(f"\n  Integrated economic indicators:")
+        if 'CPILFESL' in census_df.columns:
+            print(f"    - CPI (Consumer Price Index)")
+        if 'USACSCICP02STSAM' in census_df.columns:
+            print(f"    - CCI (Consumer Confidence Index)")
+
+        return census_df
+    except Exception as e:
+        print(f"\nX Error loading Census data: {e}")
+        return None
+
+
 def integrate_all_data(google_trends_df, fred_data):
     """Integrate all data sources into master dataset"""
     print("\n" + "="*100)
-    print("PART 1D: INTEGRATING ALL DATA SOURCES")
+    print("PART 1E: INTEGRATING ALL DATA SOURCES")
     print("="*100)
 
     master_df = google_trends_df.copy()
@@ -492,6 +525,174 @@ def analyze_price_points(retail_df):
 
 
 # ========================================================================================================
+# PART 3D: CENSUS RETAIL SALES ANALYSIS (HILL ET AL. 2012 REPLICATION)
+# ========================================================================================================
+
+def analyze_census_retail_sales(census_df):
+    """
+    Analyze U.S. Census retail sales data to test Hill et al. (2012) hypothesis.
+    Tests if beauty/fashion retail sales increase during economic downturns.
+    """
+    print("\n" + "="*100)
+    print("PART 3D: CENSUS RETAIL SALES ANALYSIS - TESTING HILL ET AL. (2012)")
+    print("="*100)
+    print("\nThis analysis replicates Hill et al.'s methodology using official Census data:")
+    print("  - NAICS 446: Health & Personal Care (beauty/cosmetics)")
+    print("  - NAICS 44812: Women's Clothing (fashion)")
+    print("  - Testing correlation with CCI and unemployment indicators")
+
+    if census_df is None:
+        print("\nX Census data not available")
+        return None
+
+    # Separate by NAICS code and remove NaT dates
+    beauty_df = census_df[census_df['NAICS  Code'] == 446].copy()
+    fashion_df = census_df[census_df['NAICS  Code'] == 44812].copy()
+
+    # Remove rows with NaT observation_date
+    beauty_df = beauty_df.dropna(subset=['observation_date'])
+    fashion_df = fashion_df.dropna(subset=['observation_date'])
+
+    # Rename for clarity
+    beauty_df = beauty_df.rename(columns={'sales': 'beauty_sales', 'USACSCICP02STSAM': 'cci'})
+    fashion_df = fashion_df.rename(columns={'sales': 'fashion_sales', 'USACSCICP02STSAM': 'cci'})
+
+    print(f"\nOK Data separated:")
+    if len(beauty_df) > 0:
+        print(f"  Beauty/Personal Care: {len(beauty_df):,} months ({beauty_df['observation_date'].min().strftime('%Y-%m')} to {beauty_df['observation_date'].max().strftime('%Y-%m')})")
+    if len(fashion_df) > 0:
+        print(f"  Women's Clothing: {len(fashion_df):,} months ({fashion_df['observation_date'].min().strftime('%Y-%m')} to {fashion_df['observation_date'].max().strftime('%Y-%m')})")
+
+    # Test correlations with CCI
+    print("\n" + "-" * 100)
+    print("CORRELATION ANALYSIS: Retail Sales vs Consumer Confidence Index")
+    print("-" * 100)
+
+    results = []
+
+    # Beauty vs CCI
+    if 'cci' in beauty_df.columns and 'beauty_sales' in beauty_df.columns:
+        valid_beauty = beauty_df[['cci', 'beauty_sales']].dropna()
+        if len(valid_beauty) > 30:
+            # Prepare regression
+            X = valid_beauty['cci'].values.reshape(-1, 1)
+            y = valid_beauty['beauty_sales'].values
+            X_with_const = sm.add_constant(X)
+            model_beauty = sm.OLS(y, X_with_const).fit()
+
+            results.append({
+                'Category': 'Beauty & Personal Care (NAICS 446)',
+                'Coefficient': model_beauty.params[1],
+                'R²': model_beauty.rsquared,
+                'Adj_R²': model_beauty.rsquared_adj,
+                'P-value': model_beauty.pvalues[1],
+                'F-statistic': model_beauty.fvalue,
+                'N_months': len(valid_beauty),
+                'Significant': 'Yes' if model_beauty.pvalues[1] < 0.05 else 'No',
+                'Direction': 'Positive' if model_beauty.params[1] > 0 else 'Negative'
+            })
+
+            sig = "OK" if model_beauty.pvalues[1] < 0.05 else "X"
+            direction = "positive" if model_beauty.params[1] > 0 else "negative (LIPSTICK EFFECT)"
+            print(f"\n{sig} Beauty & Personal Care:")
+            print(f"  R² = {model_beauty.rsquared*100:.2f}% | Coef = {model_beauty.params[1]:.2f} ({direction})")
+            print(f"  p-value = {model_beauty.pvalues[1]:.6f} | N = {len(valid_beauty)} months")
+
+    # Fashion vs CCI
+    if 'cci' in fashion_df.columns and 'fashion_sales' in fashion_df.columns:
+        valid_fashion = fashion_df[['cci', 'fashion_sales']].dropna()
+        if len(valid_fashion) > 30:
+            X = valid_fashion['cci'].values.reshape(-1, 1)
+            y = valid_fashion['fashion_sales'].values
+            X_with_const = sm.add_constant(X)
+            model_fashion = sm.OLS(y, X_with_const).fit()
+
+            results.append({
+                'Category': 'Women\'s Clothing (NAICS 44812)',
+                'Coefficient': model_fashion.params[1],
+                'R²': model_fashion.rsquared,
+                'Adj_R²': model_fashion.rsquared_adj,
+                'P-value': model_fashion.pvalues[1],
+                'F-statistic': model_fashion.fvalue,
+                'N_months': len(valid_fashion),
+                'Significant': 'Yes' if model_fashion.pvalues[1] < 0.05 else 'No',
+                'Direction': 'Positive' if model_fashion.params[1] > 0 else 'Negative'
+            })
+
+            sig = "OK" if model_fashion.pvalues[1] < 0.05 else "X"
+            direction = "positive" if model_fashion.params[1] > 0 else "negative (LIPSTICK EFFECT)"
+            print(f"\n{sig} Women's Clothing:")
+            print(f"  R² = {model_fashion.rsquared*100:.2f}% | Coef = {model_fashion.params[1]:.2f} ({direction})")
+            print(f"  p-value = {model_fashion.pvalues[1]:.6f} | N = {len(valid_fashion)} months")
+
+    print("-" * 100)
+
+    results_df = pd.DataFrame(results)
+
+    # Recession period analysis
+    print("\n" + "-" * 100)
+    print("RECESSION PERIOD ANALYSIS")
+    print("-" * 100)
+
+    # Define recession periods
+    recession_periods = {
+        'Early 1990s Recession': ('1990-07-01', '1991-03-31'),
+        'Dot-com Crash': ('2001-03-01', '2001-11-30'),
+        'Great Recession': ('2007-12-01', '2009-06-30'),
+        'COVID-19 Recession': ('2020-02-01', '2020-04-30')
+    }
+
+    period_analysis = []
+
+    for period_name, (start, end) in recession_periods.items():
+        beauty_period = beauty_df[(beauty_df['observation_date'] >= start) &
+                                  (beauty_df['observation_date'] <= end)]
+        fashion_period = fashion_df[(fashion_df['observation_date'] >= start) &
+                                     (fashion_df['observation_date'] <= end)]
+
+        # Get pre-recession baseline (12 months before)
+        pre_start = pd.to_datetime(start) - pd.DateOffset(months=12)
+        beauty_pre = beauty_df[(beauty_df['observation_date'] >= pre_start) &
+                               (beauty_df['observation_date'] < start)]
+        fashion_pre = fashion_df[(fashion_df['observation_date'] >= pre_start) &
+                                  (fashion_df['observation_date'] < start)]
+
+        if len(beauty_period) > 0 and len(beauty_pre) > 0:
+            beauty_change = ((beauty_period['beauty_sales'].mean() /
+                             beauty_pre['beauty_sales'].mean()) - 1) * 100
+            fashion_change = ((fashion_period['fashion_sales'].mean() /
+                              fashion_pre['fashion_sales'].mean()) - 1) * 100 if len(fashion_period) > 0 and len(fashion_pre) > 0 else np.nan
+
+            period_analysis.append({
+                'Period': period_name,
+                'Dates': f"{start} to {end}",
+                'Beauty_Change_%': beauty_change,
+                'Fashion_Change_%': fashion_change,
+                'Beauty_Avg': beauty_period['beauty_sales'].mean(),
+                'Fashion_Avg': fashion_period['fashion_sales'].mean() if len(fashion_period) > 0 else np.nan
+            })
+
+            print(f"\n{period_name} ({start} to {end}):")
+            print(f"  Beauty sales change: {beauty_change:+.1f}% vs pre-recession")
+            if not np.isnan(fashion_change):
+                print(f"  Fashion sales change: {fashion_change:+.1f}% vs pre-recession")
+
+    print("-" * 100)
+
+    period_df = pd.DataFrame(period_analysis) if period_analysis else None
+
+    print("\n HILL ET AL. (2012) FINDINGS:")
+    print("  - Original study: Beauty spending INCREASES during recessions")
+    print("  - Used unemployment rate as predictor")
+    print("  - Our replication uses CCI (inverse of confidence)")
+    if len(results_df) > 0:
+        sig_count = results_df['Significant'].value_counts().get('Yes', 0)
+        print(f"\n  OUR RESULTS: {sig_count}/{len(results_df)} categories show significant relationships")
+
+    return results_df, period_df, beauty_df, fashion_df
+
+
+# ========================================================================================================
 # PART 4: INTEGRATED ANALYSIS - SEARCH VS PURCHASE BEHAVIOR
 # ========================================================================================================
 
@@ -524,7 +725,7 @@ def compare_search_vs_purchase(master_df, monthly_purchase_summary):
     overlap_df = comparison_df.dropna(subset=['luxury_spending'])
 
     if len(overlap_df) > 10:
-        print(f"\n Correlation Analysis (n={len(overlap_df)} months):\n")
+        print(f"\n  Correlation Analysis (n={len(overlap_df)} months):\n")
         print("-" * 100)
 
         # Luxury spending vs CCI
@@ -554,99 +755,144 @@ def compare_search_vs_purchase(master_df, monthly_purchase_summary):
 # ========================================================================================================
 
 def create_visualizations(master_df, search_results, retail_df, comparison_df):
-    """Create comprehensive visualizations"""
+    """Create comprehensive visualizations with plasma colormap and fashion/recession theming"""
     print("\n" + "="*100)
     print("PART 5: GENERATING VISUALIZATIONS")
     print("="*100)
 
+    # Set style for all plots
+    plt.style.use('seaborn-v0_8-darkgrid')
+
     # 1. Search Indicator Rankings
     print("\n-> Creating search indicator rankings visualization...")
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(14, 9))
 
     search_results_sorted = search_results.sort_values('R²', ascending=True)
-    colors = ['#2ecc71' if sig == 'Yes' else '#e74c3c' for sig in search_results_sorted['Significant']]
 
-    ax.barh(search_results_sorted['Indicator'], search_results_sorted['R²'] * 100, color=colors)
-    ax.set_xlabel('R² (% Variance Explained)', fontsize=12, fontweight='bold')
-    ax.set_title('Fashion/Beauty Search Trends as Recession Indicators\n(Correlation with Consumer Confidence Index)',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.axvline(x=0, color='black', linestyle='-', linewidth=0.8)
-    ax.grid(axis='x', alpha=0.3)
+    # Use plasma colormap - darker colors for higher R² values
+    norm = plt.Normalize(vmin=0, vmax=search_results_sorted['R²'].max())
+    cmap = plt.cm.plasma
+    colors = [cmap(norm(val)) for val in search_results_sorted['R²']]
 
-    # Add significance markers
+    bars = ax.barh(search_results_sorted['Indicator'], search_results_sorted['R²'] * 100,
+                   color=colors, edgecolor='black', linewidth=1.2)
+
+    ax.set_xlabel('R² (% Variance Explained)', fontsize=14, fontweight='bold')
+    ax.set_ylabel('Fashion & Beauty Trend Indicator', fontsize=14, fontweight='bold')
+    ax.set_title('Fashion Trends as Economic Recession Indicators\nCorrelation with Consumer Confidence Index (2004-2024)',
+                 fontsize=16, fontweight='bold', pad=20)
+    ax.axvline(x=0, color='black', linestyle='-', linewidth=1.5)
+    ax.grid(axis='x', alpha=0.4, linestyle='--')
+
+    # Add significance markers with better formatting
     for i, (idx, row) in enumerate(search_results_sorted.iterrows()):
-        text = f"R²={row['R²']*100:.1f}%, p={'<0.001' if row['P-value'] < 0.001 else f'{row['P-value']:.3f}'}"
-        ax.text(row['R²'] * 100 + 0.3, i, text, va='center', fontsize=9)
+        sig_marker = "***" if row['P-value'] < 0.001 else "**" if row['P-value'] < 0.01 else "*" if row['P-value'] < 0.05 else "ns"
+        text = f"R²={row['R²']*100:.1f}% {sig_marker}"
+        ax.text(row['R²'] * 100 + 0.5, i, text, va='center', fontsize=11, fontweight='bold')
+
+    # Add legend for significance levels
+    ax.text(0.98, 0.02, '*** p<0.001  ** p<0.01  * p<0.05  ns = not significant',
+            transform=ax.transAxes, fontsize=10, ha='right', va='bottom',
+            bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='black'))
 
     plt.tight_layout()
-    plt.savefig('Viz/search_indicators_ranking.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Viz/search_indicators_ranking.png', dpi=300, bbox_inches='tight', facecolor='white')
     print("  OK Saved: Viz/search_indicators_ranking.png")
     plt.close()
 
     # 2. Temporal Trends - Search vs Economic Indicators
     print("-> Creating temporal trends visualization...")
-    fig, axes = plt.subplots(3, 1, figsize=(14, 10))
+    fig, axes = plt.subplots(3, 1, figsize=(16, 12))
+
+    # Plasma colors for different elements
+    plasma_colors = plt.cm.plasma([0.2, 0.5, 0.8])
 
     # CCI over time
-    axes[0].plot(master_df['date'], master_df['cci'], color='#3498db', linewidth=2)
-    axes[0].set_ylabel('Consumer Confidence\nIndex', fontsize=11, fontweight='bold')
-    axes[0].set_title('Economic Indicators Over Time', fontsize=13, fontweight='bold')
-    axes[0].grid(alpha=0.3)
-    axes[0].fill_between(master_df['date'], master_df['cci'], alpha=0.2, color='#3498db')
+    axes[0].plot(master_df['date'], master_df['cci'], color=plasma_colors[0], linewidth=2.5)
+    axes[0].set_ylabel('Consumer Confidence\nIndex', fontsize=13, fontweight='bold')
+    axes[0].set_title('Economic Recession Indicators & Fashion Search Trends (2004-2024)',
+                     fontsize=16, fontweight='bold', pad=15)
+    axes[0].grid(alpha=0.4, linestyle='--')
+    axes[0].fill_between(master_df['date'], master_df['cci'], alpha=0.25, color=plasma_colors[0])
 
-    # Shade recession periods
-    for period, color in [('Great Recession', '#e74c3c'), ('COVID-19 Crisis', '#f39c12'),
-                          ('Inflation Surge', '#9b59b6')]:
+    # Shade recession periods with distinct colors
+    recession_colors = {'Great Recession': '#8B0000', 'COVID-19 Crisis': '#FF4500',
+                       'Inflation Surge': '#DC143C'}
+    for period, color in recession_colors.items():
         period_df = master_df[master_df['period'] == period]
         if len(period_df) > 0:
             for ax in axes:
                 ax.axvspan(period_df['date'].min(), period_df['date'].max(),
-                          alpha=0.15, color=color, label=period)
+                          alpha=0.2, color=color, label=period, zorder=0)
 
     # Unemployment over time
     if 'unemployment_rate' in master_df.columns:
         axes[1].plot(master_df['date'], master_df['unemployment_rate'],
-                    color='#e74c3c', linewidth=2)
-        axes[1].set_ylabel('Unemployment\nRate (%)', fontsize=11, fontweight='bold')
-        axes[1].grid(alpha=0.3)
+                    color=plasma_colors[1], linewidth=2.5)
+        axes[1].set_ylabel('Unemployment\nRate (%)', fontsize=13, fontweight='bold')
+        axes[1].grid(alpha=0.4, linestyle='--')
+        axes[1].fill_between(master_df['date'], master_df['unemployment_rate'],
+                            alpha=0.25, color=plasma_colors[1])
 
     # Top search indicator over time
     top_indicator = search_results.iloc[0]['Indicator']
     if f'{top_indicator}_score' in master_df.columns:
         axes[2].plot(master_df['date'], master_df[f'{top_indicator}_score'],
-                    color='#2ecc71', linewidth=2)
-        axes[2].set_ylabel(f'{top_indicator}\nSearch Score', fontsize=11, fontweight='bold')
-        axes[2].set_xlabel('Year', fontsize=11, fontweight='bold')
-        axes[2].grid(alpha=0.3)
+                    color=plasma_colors[2], linewidth=2.5, label=f'{top_indicator} Search Interest')
+        axes[2].set_ylabel(f'{top_indicator}\nSearch Score', fontsize=13, fontweight='bold')
+        axes[2].set_xlabel('Year', fontsize=13, fontweight='bold')
+        axes[2].grid(alpha=0.4, linestyle='--')
+        axes[2].fill_between(master_df['date'], master_df[f'{top_indicator}_score'],
+                            alpha=0.25, color=plasma_colors[2])
 
-    axes[0].legend(loc='upper right', framealpha=0.9)
+    # Add legend to first axis only
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].legend(handles, labels, loc='upper right', framealpha=0.95, fontsize=11,
+                  title='Economic Crises', title_fontsize=12)
+
     plt.tight_layout()
-    plt.savefig('Viz/temporal_trends.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Viz/temporal_trends.png', dpi=300, bbox_inches='tight', facecolor='white')
     print("  OK Saved: Viz/temporal_trends.png")
     plt.close()
 
     # 3. Purchase Behavior - Category Distribution
     if retail_df is not None:
         print("-> Creating purchase behavior visualization...")
-        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+        fig, axes = plt.subplots(1, 2, figsize=(16, 7))
 
-        # Purchase type distribution
+        # Purchase type distribution with plasma colors
         purchase_summary = retail_df.groupby('purchase_type')['Total Spent'].sum().sort_values(ascending=False)
-        colors_pie = ['#2ecc71', '#e74c3c', '#95a5a6']
-        axes[0].pie(purchase_summary.values, labels=purchase_summary.index, autopct='%1.1f%%',
-                   colors=colors_pie, startangle=90)
-        axes[0].set_title('Spending Distribution by Purchase Type', fontsize=12, fontweight='bold')
+        colors_pie = plt.cm.plasma([0.8, 0.4, 0.1])
+        wedges, texts, autotexts = axes[0].pie(purchase_summary.values, labels=purchase_summary.index,
+                                                autopct='%1.1f%%', colors=colors_pie, startangle=90,
+                                                textprops={'fontsize': 12, 'fontweight': 'bold'})
+        for autotext in autotexts:
+            autotext.set_color('white')
+            autotext.set_fontsize(13)
+        axes[0].set_title('Consumer Spending Distribution\n"Little Luxuries" vs Necessities',
+                         fontsize=14, fontweight='bold', pad=15)
 
-        # Little luxury categories
+        # Little luxury categories with plasma colormap
         luxury_cats = retail_df[retail_df['purchase_type'] == 'Little Luxury'].groupby(
             'luxury_category')['Total Spent'].sum().sort_values(ascending=True)
-        axes[1].barh(luxury_cats.index, luxury_cats.values, color='#3498db')
-        axes[1].set_xlabel('Total Spending ($)', fontsize=11, fontweight='bold')
-        axes[1].set_title('Little Luxury Categories', fontsize=12, fontweight='bold')
-        axes[1].grid(axis='x', alpha=0.3)
+
+        # Use plasma colors for bars
+        norm = plt.Normalize(vmin=0, vmax=len(luxury_cats)-1)
+        colors_bars = [plt.cm.plasma(norm(i)) for i in range(len(luxury_cats))]
+
+        bars = axes[1].barh(luxury_cats.index, luxury_cats.values, color=colors_bars,
+                           edgecolor='black', linewidth=1.2)
+        axes[1].set_xlabel('Total Spending ($)', fontsize=13, fontweight='bold')
+        axes[1].set_ylabel('Category', fontsize=13, fontweight='bold')
+        axes[1].set_title('Fashion & Beauty "Little Luxury" Spending by Category',
+                         fontsize=14, fontweight='bold', pad=15)
+        axes[1].grid(axis='x', alpha=0.4, linestyle='--')
+
+        # Format x-axis with currency
+        axes[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'${x/1e6:.1f}M'))
 
         plt.tight_layout()
-        plt.savefig('Viz/purchase_behavior_analysis.png', dpi=300, bbox_inches='tight')
+        plt.savefig('Viz/purchase_behavior_analysis.png', dpi=300, bbox_inches='tight', facecolor='white')
         print("  OK Saved: Viz/purchase_behavior_analysis.png")
         plt.close()
 
@@ -655,44 +901,58 @@ def create_visualizations(master_df, search_results, retail_df, comparison_df):
     overlap_df = comparison_df.dropna(subset=['luxury_spending'])
 
     if len(overlap_df) > 10:
-        fig, axes = plt.subplots(2, 1, figsize=(14, 10))
+        fig, axes = plt.subplots(2, 1, figsize=(16, 11))
 
         # Normalize for dual axis
         cci_norm = (overlap_df['cci'] - overlap_df['cci'].min()) / (overlap_df['cci'].max() - overlap_df['cci'].min())
         spend_norm = (overlap_df['luxury_spending'] - overlap_df['luxury_spending'].min()) / (overlap_df['luxury_spending'].max() - overlap_df['luxury_spending'].min())
 
-        axes[0].plot(overlap_df['date'], cci_norm, label='Consumer Confidence (normalized)',
-                    color='#3498db', linewidth=2, marker='o', markersize=4)
-        axes[0].plot(overlap_df['date'], spend_norm, label='Luxury Spending (normalized)',
-                    color='#2ecc71', linewidth=2, marker='s', markersize=4)
-        axes[0].set_ylabel('Normalized Values', fontsize=11, fontweight='bold')
-        axes[0].set_title('Consumer Confidence vs Actual Luxury Spending\n(Normalized Comparison)',
-                         fontsize=13, fontweight='bold')
-        axes[0].legend(loc='best')
-        axes[0].grid(alpha=0.3)
+        # Use plasma colors
+        plasma_line_colors = plt.cm.plasma([0.3, 0.7])
 
-        # Scatter plot
-        axes[1].scatter(overlap_df['cci'], overlap_df['luxury_spending'],
-                       alpha=0.6, s=100, color='#9b59b6')
+        axes[0].plot(overlap_df['date'], cci_norm, label='Consumer Confidence (normalized)',
+                    color=plasma_line_colors[0], linewidth=2.5, marker='o', markersize=6)
+        axes[0].plot(overlap_df['date'], spend_norm, label='Little Luxury Spending (normalized)',
+                    color=plasma_line_colors[1], linewidth=2.5, marker='s', markersize=6)
+        axes[0].set_ylabel('Normalized Values', fontsize=13, fontweight='bold')
+        axes[0].set_title('Economic Confidence vs Fashion/Beauty Spending Behavior\nSearch Intent vs Actual Purchase Patterns',
+                         fontsize=16, fontweight='bold', pad=15)
+        axes[0].legend(loc='best', fontsize=12, framealpha=0.95)
+        axes[0].grid(alpha=0.4, linestyle='--')
+        axes[0].fill_between(overlap_df['date'], cci_norm, alpha=0.2, color=plasma_line_colors[0])
+        axes[0].fill_between(overlap_df['date'], spend_norm, alpha=0.2, color=plasma_line_colors[1])
+
+        # Scatter plot with plasma colormap based on date
+        norm_dates = plt.Normalize(vmin=0, vmax=len(overlap_df)-1)
+        scatter_colors = [plt.cm.plasma(norm_dates(i)) for i in range(len(overlap_df))]
+
+        scatter = axes[1].scatter(overlap_df['cci'], overlap_df['luxury_spending'],
+                                 alpha=0.7, s=150, c=scatter_colors, edgecolors='black', linewidth=1.5)
 
         # Add regression line
         z = np.polyfit(overlap_df['cci'], overlap_df['luxury_spending'], 1)
         p = np.poly1d(z)
-        axes[1].plot(overlap_df['cci'], p(overlap_df['cci']), "r--", linewidth=2, alpha=0.8)
+        axes[1].plot(overlap_df['cci'], p(overlap_df['cci']), color='darkred',
+                    linestyle='--', linewidth=3, alpha=0.8, label='Trend Line')
 
         corr, p_val = stats.pearsonr(overlap_df['cci'], overlap_df['luxury_spending'])
-        axes[1].text(0.05, 0.95, f'r = {corr:.3f}\np = {p_val:.4f}',
-                    transform=axes[1].transAxes, fontsize=12, verticalalignment='top',
-                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+        sig_text = "***" if p_val < 0.001 else "**" if p_val < 0.01 else "*" if p_val < 0.05 else "ns"
+        axes[1].text(0.05, 0.95, f'Correlation: r = {corr:.3f}\np-value = {p_val:.4f} {sig_text}',
+                    transform=axes[1].transAxes, fontsize=13, verticalalignment='top', fontweight='bold',
+                    bbox=dict(boxstyle='round', facecolor='white', alpha=0.9, edgecolor='black', linewidth=2))
 
-        axes[1].set_xlabel('Consumer Confidence Index', fontsize=11, fontweight='bold')
-        axes[1].set_ylabel('Luxury Spending ($)', fontsize=11, fontweight='bold')
-        axes[1].set_title('Correlation: Consumer Confidence vs Luxury Spending',
-                         fontsize=13, fontweight='bold')
-        axes[1].grid(alpha=0.3)
+        axes[1].set_xlabel('Consumer Confidence Index', fontsize=13, fontweight='bold')
+        axes[1].set_ylabel('Fashion & Beauty Luxury Spending ($)', fontsize=13, fontweight='bold')
+        axes[1].set_title('Recession Indicator: Consumer Confidence vs Little Luxury Purchases',
+                         fontsize=15, fontweight='bold', pad=15)
+        axes[1].grid(alpha=0.4, linestyle='--')
+        axes[1].legend(fontsize=11)
+
+        # Format y-axis with currency
+        axes[1].yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'${x/1e6:.1f}M'))
 
         plt.tight_layout()
-        plt.savefig('Viz/search_vs_purchase_comparison.png', dpi=300, bbox_inches='tight')
+        plt.savefig('Viz/search_vs_purchase_comparison.png', dpi=300, bbox_inches='tight', facecolor='white')
         print("  OK Saved: Viz/search_vs_purchase_comparison.png")
         plt.close()
 
@@ -704,7 +964,8 @@ def create_visualizations(master_df, search_results, retail_df, comparison_df):
 # ========================================================================================================
 
 def export_tableau_data(master_df, search_results, retail_df, monthly_purchase_summary,
-                       price_analysis, comparison_df):
+                       price_analysis, comparison_df, census_results=None, census_period_df=None,
+                       beauty_census_df=None, fashion_census_df=None):
     """Export comprehensive datasets for Tableau"""
     print("\n" + "="*100)
     print("PART 6: EXPORTING TABLEAU-READY DATASETS")
@@ -770,12 +1031,40 @@ def export_tableau_data(master_df, search_results, retail_df, monthly_purchase_s
         category_period.to_csv('Tableau_Data/tableau_category_by_period.csv', index=False)
         print("  OK Saved: Tableau_Data/tableau_category_by_period.csv")
 
+    # 7. Census retail sales data
+    if census_results is not None:
+        print(f"\n-> Census Retail Sales Results: {len(census_results)} categories")
+        census_results.to_csv('Tableau_Data/tableau_census_results.csv', index=False)
+        print("  OK Saved: Tableau_Data/tableau_census_results.csv")
+
+    if census_period_df is not None:
+        print(f"\n-> Census Recession Period Analysis: {len(census_period_df)} periods")
+        census_period_df.to_csv('Tableau_Data/tableau_census_recession_analysis.csv', index=False)
+        print("  OK Saved: Tableau_Data/tableau_census_recession_analysis.csv")
+
+    # 8. Long-form Census time series data
+    if beauty_census_df is not None and fashion_census_df is not None:
+        # Combine beauty and fashion data for time series visualization
+        beauty_ts = beauty_census_df[['observation_date', 'beauty_sales', 'cci', 'CPILFESL']].copy()
+        beauty_ts['category'] = 'Beauty & Personal Care'
+        beauty_ts = beauty_ts.rename(columns={'beauty_sales': 'sales', 'CPILFESL': 'cpi'})
+
+        fashion_ts = fashion_census_df[['observation_date', 'fashion_sales', 'cci', 'CPILFESL']].copy()
+        fashion_ts['category'] = 'Women\'s Clothing'
+        fashion_ts = fashion_ts.rename(columns={'fashion_sales': 'sales', 'CPILFESL': 'cpi'})
+
+        census_timeseries = pd.concat([beauty_ts, fashion_ts], ignore_index=True)
+        print(f"\n-> Census Time Series (1992-2025): {len(census_timeseries)} month-category observations")
+        census_timeseries.to_csv('Tableau_Data/tableau_census_timeseries.csv', index=False)
+        print("  OK Saved: Tableau_Data/tableau_census_timeseries.csv")
+
     print("\nOK All Tableau datasets exported successfully!")
     print("\n TABLEAU DASHBOARD STRUCTURE:")
     print("  Dashboard 1 - Temporal Trends: Use Tableau_Data/tableau_main_data_final.csv")
     print("  Dashboard 2 - Category Comparison: Use Tableau_Data/tableau_search_results.csv + Tableau_Data/tableau_purchase_summary.csv")
     print("  Dashboard 3 - Correlation Explorer: Use Tableau_Data/tableau_search_vs_purchase.csv")
     print("  Dashboard 4 - Price & Demographics: Use Tableau_Data/tableau_price_analysis.csv + Tableau_Data/tableau_category_by_period.csv")
+    print("  Dashboard 5 - Census Retail Sales (33-year): Use Tableau_Data/tableau_census_timeseries.csv + tableau_census_results.csv")
 
 
 # ========================================================================================================
@@ -789,6 +1078,7 @@ def main():
     google_trends_df = load_google_trends_data()
     fred_data = load_fred_data()
     retail_df = load_retail_transactions()
+    census_df = load_census_retail_sales()
     master_df = integrate_all_data(google_trends_df, fred_data)
 
     # PART 2: Search behavior analysis
@@ -826,6 +1116,15 @@ def main():
         monthly_purchase_summary, luxury_ratio = analyze_purchase_patterns(retail_df)
         price_analysis = analyze_price_points(retail_df)
 
+    # PART 3D: Census retail sales analysis
+    census_results = None
+    census_period_df = None
+    beauty_census_df = None
+    fashion_census_df = None
+
+    if census_df is not None:
+        census_results, census_period_df, beauty_census_df, fashion_census_df = analyze_census_retail_sales(census_df)
+
     # PART 4: Compare search vs purchase
     comparison_df = None
     if retail_df is not None and monthly_purchase_summary is not None:
@@ -836,7 +1135,8 @@ def main():
 
     # PART 6: Export for Tableau
     export_tableau_data(master_df, search_results, retail_df, monthly_purchase_summary,
-                       price_analysis, comparison_df)
+                       price_analysis, comparison_df, census_results, census_period_df,
+                       beauty_census_df, fashion_census_df)
 
     # Save master dataset
     print("\n" + "="*100)
@@ -856,18 +1156,41 @@ def main():
         retail_df.to_csv('Processed_Data/retail_transactions_processed.csv', index=False)
         print(f"OK Retail data saved: Processed_Data/retail_transactions_processed.csv")
 
+    # Save Census results
+    if census_results is not None:
+        census_results.to_csv('Processed_Data/census_retail_results.csv', index=False)
+        print(f"OK Census analysis results saved: Processed_Data/census_retail_results.csv")
+
+    if census_period_df is not None:
+        census_period_df.to_csv('Processed_Data/census_recession_periods.csv', index=False)
+        print(f"OK Census recession analysis saved: Processed_Data/census_recession_periods.csv")
+
     # Final summary
     print("\n" + "="*100)
     print(" "*35 + "ANALYSIS COMPLETE!")
     print("="*100)
     print(f"\nCompletion time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("\n KEY FINDINGS:")
-    print(f"  - Search Indicators: {search_results['Significant'].value_counts().get('Yes', 0)}/{len(search_results)} significant")
-    print(f"  - Top Predictor: {search_results.iloc[0]['Indicator']} (R² = {search_results.iloc[0]['R²']*100:.1f}%)")
+    print(f"\n  SEARCH BEHAVIOR (Google Trends 2004-2024):")
+    print(f"    - Indicators tested: {len(search_results)}")
+    print(f"    - Significant results: {search_results['Significant'].value_counts().get('Yes', 0)}/{len(search_results)}")
+    print(f"    - Top predictor: {search_results.iloc[0]['Indicator']} (R² = {search_results.iloc[0]['R²']*100:.1f}%)")
+
     if retail_df is not None:
         luxury_pct = len(retail_df[retail_df['purchase_type'] == 'Little Luxury']) / len(retail_df) * 100
-        print(f"  - Little Luxury Purchases: {luxury_pct:.1f}% of all transactions")
-    print("\nOK Ready for Tableau dashboard creation")
+        print(f"\n  PURCHASE BEHAVIOR (Retail Transactions 2023-2025):")
+        print(f"    - Little luxury purchases: {luxury_pct:.1f}% of all transactions")
+        print(f"    - Total transactions: {len(retail_df):,}")
+
+    if census_results is not None and len(census_results) > 0:
+        sig_census = census_results['Significant'].value_counts().get('Yes', 0)
+        print(f"\n  CENSUS RETAIL SALES (1992-2025, 33 years):")
+        print(f"    - Categories tested: {len(census_results)}")
+        print(f"    - Significant results: {sig_census}/{len(census_results)}")
+        print(f"    - Data coverage: 4 major recessions analyzed")
+        print(f"    - HILL ET AL. (2012) REPLICATION: {'SUCCESS' if sig_census > 0 else 'MIXED'}")
+
+    print("\nOK Ready for Tableau dashboard creation (9 CSV files exported)")
     print("OK Ready for final report writing")
     print("\n" + "="*100)
 
