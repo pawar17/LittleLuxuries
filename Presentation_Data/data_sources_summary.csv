@@ -1,0 +1,10 @@
+Data Source,Description,Time Period,Observations,Variables,Frequency,Source,Used For
+Google Trends,Fashion/Beauty search volumes (40 terms across 8 indicators),2004-01 to 2024-12,252,40,Monthly,Google Trends API,"Search behavior analysis, consumer interest patterns"
+Consumer Price Index (CPI),Inflation measure (CPILFESL),1957-01 to 2025-09,825,1,Monthly,FRED (Federal Reserve Economic Data),"Inflation adjustment, real value calculations"
+Consumer Confidence Index (CCI),Consumer confidence measure (USACSCICP02STSAM),1960-01 to 2025-10,790,1,Monthly,FRED,"Primary economic sentiment indicator, regression dependent variable"
+Consumer Sentiment Index,University of Michigan sentiment measure (UMCSENT),1952-11 to 2025-10,876,1,Monthly,FRED,Secondary validation of consumer confidence
+Unemployment Rate,National unemployment rate (UNRATE),1948-01 to 2025-09,933,1,Monthly,FRED,"Economic context, recession identification"
+Retail Sales - Clothing,Monthly retail sales in clothing sector (MRTSSM448USN),1992-01 to 2025-08,404,1,Monthly,FRED,Validation of fashion spending patterns
+Personal Saving Rate,Percentage of disposable income saved (PSAVERT),1959-01 to 2025-09,801,1,Monthly,FRED,Economic behavior context
+Retail Transactions,Individual purchase transactions (200 customers),2023-01-01 to 2025-01-13,10000,9,Daily (transaction-level),Retail transaction database,"Purchase behavior, price point analysis, category spending"
+U.S. Census Retail Sales,"Official retail sales (NAICS 446: Beauty, NAICS 44812: Women's Clothing)",1992-01 to 2025-08,808,7,Monthly,U.S. Census Bureau,"Hill et al. (2012) replication, long-term purchase patterns (33 years)"
