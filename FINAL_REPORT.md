@@ -3,7 +3,9 @@
 **A Comprehensive Analysis of "Treatonomics" Using Search and Purchase Data**
 
 **Authors:** Tanushree Paidichetty, Sruthi Visvanathan, Aadya Pawar
-**Course:** Data Visualization
+
+**Course:** CS 43900
+
 **Date:** December 2024
 
 ---
@@ -1660,23 +1662,3 @@ Hair, J. F., Black, W. C., Babin, B. J., & Anderson, R. E. (2010). *Multivariate
 2. `temporal_trends.png` - Time series of economic indicators
 3. `purchase_behavior_analysis.png` - Pie/bar charts of purchases
 4. `search_vs_purchase_comparison.png` - Correlation scatter plots
-
----
-
-## Acknowledgments
-
-We thank:
-- **Dr. [Instructor Name]** for guidance on this project
-- **Federal Reserve Bank of St. Louis** for providing FRED data
-- **Google Trends** for search volume data
-- **Original researchers** (Hill et al., Style Analytics) whose work inspired this analysis
-
----
-
-**Document Version:** 1.0
-**Last Updated:** December 9, 2024
-**Word Count:** ~12,000 words
-
----
-
-*This report was generated as part of a Data Visualization course project examining the "lipstick effect" and modern treatonomics using comprehensive search and purchase data analysis.*

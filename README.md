@@ -17,7 +17,7 @@ This project investigates the **"lipstick effect"** and modern **"treatonomics"*
 - Sruthi Visvanathan (Dashboard design & creation)
 - Aadya Pawar (Data processing, analysis & visualization)
 
-**Course:** Data Visualization | **Date:** December 2024
+**Course:** CS 43900 | **Date:** 11 December 2024
 
 ---
 
