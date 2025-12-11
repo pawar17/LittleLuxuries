@@ -9,10 +9,6 @@ from matplotlib.colors import LinearSegmentedColormap
 pink_navy_grey_colors = [
     "#f4c3d7",
     "#e89bbd",
-    "#d76e9b",
-    "#b7548e",
-    "#8b4c7c",
-    "#6d3e6f",
     "#4e2f63",
     "#2e1d45",
     "#1a0f2b"
