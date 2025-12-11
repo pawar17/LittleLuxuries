@@ -4,6 +4,23 @@ import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.colors import LinearSegmentedColormap
+
+pink_navy_grey_colors = [
+    "#f4c3d7",
+    "#e89bbd",
+    "#d76e9b",
+    "#b7548e",
+    "#8b4c7c",
+    "#6d3e6f",
+    "#4e2f63",
+    "#2e1d45",
+    "#1a0f2b"
+]
+
+pink_navy_grey_cmap = LinearSegmentedColormap.from_list(
+    "pink_navy_grey", pink_navy_grey_colors
+)
 
 # Load the data
 df = pd.read_csv(r'C:\Users\aadya\Coding_Projects\LittleLuxuries\Processed_Data\master_dataset_complete.csv')
@@ -127,7 +144,7 @@ econ_label_mapping = {
 economic_labels = [econ_label_mapping[col] for col in available_economic]
 
 # Create heatmap
-sns.heatmap(fashion_econ_corr, annot=True, fmt='.3f', cmap='RdBu_r', center=0,
+sns.heatmap(fashion_econ_corr, annot=True, fmt='.3f', cmap=pink_navy_grey_cmap, center=0,
             vmin=-1, vmax=1, cbar_kws={'label': 'Correlation Coefficient'},
             xticklabels=economic_labels, yticklabels=fashion_labels,
             linewidths=0.5, linecolor='gray', ax=ax)
