@@ -7,11 +7,12 @@ import seaborn as sns
 from matplotlib.colors import LinearSegmentedColormap
 
 pink_navy_grey_colors = [
-    "#f4c3d7",
-    "#e89bbd",
-    "#4e2f63",
-    "#2e1d45",
-    "#1a0f2b"
+    "#f1d0d6",
+    "#e0b5c8",
+    "#d19ab8",
+    "#c57da7",
+    "#b05890",
+    "#8e3b6b"
 ]
 
 pink_navy_grey_cmap = LinearSegmentedColormap.from_list(
