@@ -324,7 +324,7 @@ This guide explains what each Tableau-ready CSV file contains and how to use it 
 - Heat map: Year × Month sales patterns
 - Small multiples: Beauty sales trend vs. Fashion sales trend
 
-**This is your HERO visualization** - Shows 33 years of evidence for lipstick effect!
+This visualization shows 33 years of evidence for the lipstick effect using official U.S. Census data.
 
 ---
 
@@ -351,7 +351,7 @@ This guide explains what each Tableau-ready CSV file contains and how to use it 
 
 ---
 
-### Dashboard 3: **Census Breakthrough (33-Year Analysis)** ⭐ HERO DASHBOARD
+### Dashboard 3: Census Data Analysis (33-Year Analysis)
 **Files:** `tableau_census_timeseries.csv`, `tableau_census_results.csv`, `tableau_census_recession_analysis.csv`
 
 **Visualizations:**
@@ -367,7 +367,7 @@ This guide explains what each Tableau-ready CSV file contains and how to use it 
    - "R² = 24.8%"
    - "p < 0.000001"
    - "404 months analyzed"
-   - "Hill et al. (2012) Replicated ✓"
+   - "Hill et al. (2012) Replicated"
 
 ---
 
@@ -398,10 +398,10 @@ This guide explains what each Tableau-ready CSV file contains and how to use it 
 - Fashion items > Beauty items as recession indicators
 - 7 out of 8 indicators significant = strong evidence
 
-**From Census Data (BREAKTHROUGH):**
-- **Hill et al. (2012) successfully replicated** with 33 years of official data
-- Beauty R² = 24.8% = **strongest evidence for lipstick effect ever documented**
-- Beauty sales UP during ALL recessions (+6.2%, +4.5%, +0.4%)
+**From Census Data:**
+- Hill et al. (2012) successfully replicated with 33 years of official data
+- Beauty R² = 24.8% (strongest evidence for lipstick effect documented to date)
+- Beauty sales increased during all recessions (+6.2%, +4.5%, +0.4%)
 - 404 months across 4 economic cycles
 
 **From Purchase Data:**

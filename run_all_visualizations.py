@@ -19,9 +19,28 @@ import matplotlib.dates as mdates
 from matplotlib.patches import Patch
 import os
 
-# Set style
+# Set style and custom color palette
 plt.style.use('default')
-sns.set_palette("husl")
+
+# Define custom pink-purple-gray color palette
+PINK_LIGHT = '#FFB6C1'      # Light pink
+PINK_HOT = '#FF69B4'        # Hot pink
+PURPLE_LIGHT = '#DDA0DD'    # Light purple (plum)
+PURPLE_MEDIUM = '#BA55D3'   # Medium purple
+PURPLE_DARK = '#8B5FBF'     # Dark purple
+GRAY_LIGHT = '#D3D3D3'      # Light gray
+GRAY_MEDIUM = '#808080'     # Medium gray
+GRAY_DARK = '#505050'       # Dark gray
+
+# Custom colormap for diverging data (correlations)
+PINK_PURPLE_CMAP = sns.blend_palette([PURPLE_DARK, PURPLE_LIGHT, '#FFFFFF', PINK_LIGHT, PINK_HOT], as_cmap=True)
+
+# Custom colormap for sequential data
+SEQUENTIAL_CMAP = sns.blend_palette(['#FFFFFF', PINK_LIGHT, PINK_HOT, PURPLE_LIGHT, PURPLE_DARK], as_cmap=True)
+
+# Set default color cycle
+CUSTOM_COLORS = [PINK_HOT, PURPLE_DARK, PURPLE_MEDIUM, PINK_LIGHT, PURPLE_LIGHT, GRAY_MEDIUM]
+sns.set_palette(CUSTOM_COLORS)
 
 print("=" * 80)
 print("LITTLE LUXURIES PROJECT - COMPLETE VISUALIZATION DEMO")
@@ -54,20 +73,20 @@ fig, ax = plt.subplots(figsize=(16, 8))
 
 # Plot search scores
 ax.plot(df['date'], df['Lipstick Index_score'],
-        label='Lipstick Index', linewidth=2.5, color='#E94B3C', alpha=0.8)
+        label='Lipstick Index', linewidth=2.5, color=PINK_HOT, alpha=0.9)
 ax.plot(df['date'], df['Mini Skirts_score'],
-        label='Mini Skirts', linewidth=2.5, color='#6C63FF', alpha=0.8)
+        label='Mini Skirts', linewidth=2.5, color=PURPLE_DARK, alpha=0.9)
 
 # Add recession periods
 for recession in recessions:
     if recession['end'] >= df['date'].min() and recession['start'] <= df['date'].max():
         ax.axvspan(recession['start'], recession['end'],
-                  alpha=0.2, color='gray', label='_nolegend_')
+                  alpha=0.2, color=GRAY_MEDIUM, label='_nolegend_')
         mid_date = recession['start'] + (recession['end'] - recession['start']) / 2
         y_position = ax.get_ylim()[1] * 0.95
         ax.text(mid_date, y_position, recession['name'],
                horizontalalignment='center', fontsize=10,
-               fontweight='bold', alpha=0.7)
+               fontweight='bold', alpha=0.7, color=GRAY_DARK)
 
 # Customize plot
 ax.set_xlabel('Date', fontsize=14, fontweight='bold')
@@ -80,7 +99,7 @@ plt.xticks(rotation=45, ha='right')
 ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.5)
 
 # Add legend
-recession_patch = Patch(color='gray', alpha=0.2, label='Recession Period')
+recession_patch = Patch(color=GRAY_MEDIUM, alpha=0.2, label='Recession Period')
 handles, labels = ax.get_legend_handles_labels()
 handles.append(recession_patch)
 labels.append('Recession Period')
@@ -129,10 +148,10 @@ economic_labels = [econ_label_mapping[col] for col in economic_indicators]
 
 # Create heatmap
 fig, ax = plt.subplots(figsize=(12, 10))
-sns.heatmap(fashion_econ_corr, annot=True, fmt='.3f', cmap='RdBu_r', center=0,
+sns.heatmap(fashion_econ_corr, annot=True, fmt='.3f', cmap=PINK_PURPLE_CMAP, center=0,
             vmin=-1, vmax=1, cbar_kws={'label': 'Correlation Coefficient'},
             xticklabels=economic_labels, yticklabels=fashion_labels,
-            linewidths=0.5, linecolor='gray', ax=ax)
+            linewidths=0.5, linecolor='white', ax=ax)
 
 ax.set_title('Correlation Heatmap: Fashion Indicators vs Economic Indicators\n(2004-2024)',
              fontsize=16, fontweight='bold', pad=20)
@@ -167,16 +186,16 @@ correlations_flat_df = correlations_flat_df.sort_values('Abs_Correlation', ascen
 fig2, ax2 = plt.subplots(figsize=(14, 8))
 top_20 = correlations_flat_df.head(20).copy()
 top_20['Label'] = top_20['Fashion Indicator'] + '\nvs\n' + top_20['Economic Indicator']
-top_20['Color'] = top_20['Correlation'].apply(lambda x: '#E94B3C' if x < 0 else '#6C63FF')
+top_20['Color'] = top_20['Correlation'].apply(lambda x: PURPLE_DARK if x < 0 else PINK_HOT)
 
-bars = ax2.barh(range(len(top_20)), top_20['Correlation'], color=top_20['Color'], alpha=0.7)
+bars = ax2.barh(range(len(top_20)), top_20['Correlation'], color=top_20['Color'], alpha=0.8)
 ax2.set_yticks(range(len(top_20)))
 ax2.set_yticklabels(top_20['Label'], fontsize=9)
 ax2.set_xlabel('Correlation Coefficient', fontsize=12, fontweight='bold')
 ax2.set_title('Top 20 Strongest Correlations: Fashion vs Economic Indicators',
               fontsize=14, fontweight='bold', pad=20)
-ax2.axvline(x=0, color='black', linestyle='-', linewidth=0.8)
-ax2.grid(True, alpha=0.3, axis='x')
+ax2.axvline(x=0, color=GRAY_DARK, linestyle='-', linewidth=0.8)
+ax2.grid(True, alpha=0.3, axis='x', color=GRAY_LIGHT)
 
 for i, (idx, row) in enumerate(top_20.iterrows()):
     value = row['Correlation']
@@ -214,10 +233,10 @@ binary_significance = (p_value_matrix < 0.05).astype(int)
 
 # Create visualization
 fig, ax = plt.subplots(figsize=(12, 10))
-colors = ['#F0E6F6', '#8B5FBF']
-cmap = sns.blend_palette(colors, as_cmap=True)
+# Pink to purple gradient for binary significance
+binary_cmap = sns.blend_palette(['#FADADD', PURPLE_DARK], as_cmap=True)
 
-sns.heatmap(binary_significance, annot=True, fmt='d', cmap=cmap,
+sns.heatmap(binary_significance, annot=True, fmt='d', cmap=binary_cmap,
             vmin=0, vmax=1, cbar_kws={'label': 'Significance', 'ticks': [0, 1]},
             xticklabels=economic_labels, yticklabels=fashion_labels,
             linewidths=2, linecolor='white', ax=ax,
@@ -306,10 +325,10 @@ economic_display = [economic_labels_census[var] for var in economic_variables_ce
 
 # Create visualization
 fig, ax = plt.subplots(figsize=(10, 8))
-colors = ['#F0E6F6', '#8B5FBF']
-cmap = sns.blend_palette(colors, as_cmap=True)
+# Pink to purple gradient for binary significance
+census_binary_cmap = sns.blend_palette(['#FADADD', PURPLE_DARK], as_cmap=True)
 
-sns.heatmap(binary_significance_census, annot=True, fmt='d', cmap=cmap,
+sns.heatmap(binary_significance_census, annot=True, fmt='d', cmap=census_binary_cmap,
             vmin=0, vmax=1, cbar_kws={'label': 'Significance', 'ticks': [0, 1]},
             xticklabels=economic_display, yticklabels=fashion_display,
             linewidths=2, linecolor='white', ax=ax,

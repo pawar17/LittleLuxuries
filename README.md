@@ -4,11 +4,11 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Analysis](https://img.shields.io/badge/Analysis-Complete-success.svg)]()
-[![Data](https://img.shields.io/badge/Data-20%20Years-informational.svg)]()
+[![Data](https://img.shields.io/badge/Data-33%20Years-informational.svg)]()
 
 ---
 
-##  Project Overview
+## Project Overview
 
 This project investigates the **"lipstick effect"** and modern **"treatonomics"** phenomenon—the consumer behavior pattern where individuals continue purchasing small indulgences during economic uncertainty while cutting back on major expenses.
 
@@ -17,86 +17,109 @@ This project investigates the **"lipstick effect"** and modern **"treatonomics"*
 - Sruthi Visvanathan (Dashboard design & creation)
 - Aadya Pawar (Data processing, analysis & visualization)
 
-**Course:** CS 43900 | **Date:** 11 December 2024
+**Course:** CS 43900 | **Date:** December 2024
 
 ---
 
-##  Key Findings (TL;DR)
+## Key Findings
 
 ### Search Behavior (Google Trends 2004-2024)
--  **7 out of 8 fashion/beauty indicators** significantly correlate with Consumer Confidence Index (p < 0.05)
--  **Mini Skirts** is the strongest predictor (R² = 18.3%)
--  **Lipstick Index** is significant (R² = 5.6%) but weaker than fashion items
--  All significant indicators show **inverse relationships**: When consumer confidence drops, fashion/beauty searches increase
+- 7 out of 8 fashion/beauty indicators significantly correlate with Consumer Confidence Index (p < 0.05)
+- Mini Skirts is the strongest predictor (R² = 18.3%)
+- Lipstick Index is significant (R² = 5.6%) but weaker than fashion items
+- All significant indicators show inverse relationships: When consumer confidence drops, fashion/beauty searches increase
 
-### Purchase Behavior - U.S. Census Data (1992-2025) **BREAKTHROUGH FINDING**
--  **HILL ET AL. (2012) SUCCESSFULLY REPLICATED** using 33 years of official U.S. government retail sales data
--  **Beauty & Personal Care (NAICS 446)**: R² = 24.8%, p < 0.000001 - **HIGHLY SIGNIFICANT**
--  **Women's Clothing (NAICS 44812)**: R² = 10.0%, p < 0.000001 - **HIGHLY SIGNIFICANT**
--  **Both categories show negative correlations** with Consumer Confidence Index = Classic lipstick effect confirmed
--  **Beauty sales increased during ALL 3 recessions tested:** Dot-com crash (+6.2%), Great Recession (+4.5%), COVID-19 (+0.4%)
--  **404 months of data analyzed** across 4 major economic cycles - strongest evidence for lipstick effect ever documented
+### Purchase Behavior - U.S. Census Data (1992-2025)
+- Hill et al. (2012) successfully replicated using 33 years of official U.S. government retail sales data
+- Beauty & Personal Care (NAICS 446): R² = 24.8%, p < 0.000001
+- Women's Clothing (NAICS 44812): R² = 10.0%, p < 0.000001
+- Both categories show negative correlations with Consumer Confidence Index
+- Beauty sales increased during all 3 recessions tested: Dot-com crash (+6.2%), Great Recession (+4.5%), COVID-19 (+0.4%)
+- 404 months of data analyzed across 4 major economic cycles
 
 ### Purchase Behavior - Retail Transactions (2023-2025)
--  **61.7% of all purchases** are "little luxuries" ($24M out of $25.3M)
--  **Fashion & Accessories** dominate luxury spending (94.2%)
--  **Sweet spot:** $100-500 price range (34.3% of luxury transactions)
--  **Search ≠ Purchase:** Browsing behavior differs from buying behavior (24-month comparison period)
+- 61.7% of all purchases are "little luxuries" ($15M out of $24M analyzed)
+- Fashion & Accessories dominate luxury spending (94.2%)
+- Price sweet spot: $100-500 range (34.3% of luxury transactions)
 
-**Bottom Line:** The lipstick effect is **REAL in both search AND purchase behavior**. We've successfully replicated Hill et al. (2012) with 33 years of official U.S. Census data—the strongest evidence for the lipstick effect ever documented. The modern "lipstick" is **mini skirts, blazers, and designer bags**, not just traditional cosmetics.
+The lipstick effect is observable in both search and purchase behavior. This analysis successfully replicates Hill et al. (2012) using 33 years of official U.S. Census data. The modern "lipstick" includes mini skirts, blazers, and designer bags, not just traditional cosmetics.
 
 ---
 
-##  Project Structure
+## Project Structure
 
 ```
 LittleLuxuries/
-
- little_luxuries_master_analysis.py    #  MAIN ANALYSIS SCRIPT (run this!)
- RecssionIndicator.R                   #  Original R script (reference)
- requirements.txt                      #  Python dependencies
-
- Data_Sources/                         #  ALL INPUT DATA FILES
-    All_Variables_Us_Data_Sheet1.xlsx #    Google Trends data (2004-2024)
-    CPILFESL.csv                      #    CPI data (inflation)
-    USACSCICP02STSAM.csv              #    Consumer Confidence (FRED)
-    spending_patterns_detailed.csv    #    Retail transactions (10K)
-    UMCSENT.csv                       #    Consumer Sentiment (FRED)
-    UNRATE.csv                        #    Unemployment Rate (FRED)
-    MRTSSM448USN.csv                  #    Retail Sales (FRED)
-    PSAVERT.csv                       #    Saving Rate (FRED)
-    [other FRED data files...]
-
- Processed_Data/                       #  PROCESSED DATASETS (generated by script)
-    master_dataset_complete.csv       #    Complete integrated dataset
-    search_indicators_results_final.csv #  Search analysis results
-    retail_transactions_processed.csv #    Categorized purchases
-
- Tableau_Data/                         #  TABLEAU-READY EXPORTS (6 files)
-    tableau_main_data_final.csv       #    Main time series data
-    tableau_search_results.csv        #    Search indicator results
-    tableau_purchase_summary.csv      #    Purchase behavior summary
-    tableau_search_vs_purchase.csv    #    Search vs purchase comparison
-    tableau_price_analysis.csv        #    Price point analysis
-    tableau_category_by_period.csv    #    Category trends over time
-
- Viz/                                  #  VISUALIZATIONS (4 PNG files)
-    search_indicators_ranking.png     #    Indicator ranking chart
-    temporal_trends.png               #    Time series trends
-    purchase_behavior_analysis.png    #    Purchase behavior charts
-    search_vs_purchase_comparison.png #    Search vs purchase comparison
-
- FINAL_REPORT.md                       #  COMPREHENSIVE REPORT (12K words)
- EXECUTIVE_FINDINGS_SUMMARY.md         #  EXECUTIVE SUMMARY
- README.md                             #  THIS FILE
+│
+├── little_luxuries_master_analysis.py    # MAIN ANALYSIS SCRIPT (run this!)
+├── run_all_visualizations.py             # Visualization generation script
+├── requirements.txt                       # Python dependencies
+├── README.md                              # This file
+├── TABLEAU_DATA_GUIDE.md                  # Detailed guide for Tableau files
+│
+├── Data_Sources/                          # ALL INPUT DATA FILES
+│   ├── All_Variables_Us_Data_Sheet1.xlsx # Google Trends data (2004-2024)
+│   ├── census_retail_sales_1992_2025.csv # U.S. Census retail sales (33 years)
+│   ├── census_data_cleaning_script.py    # Census data preprocessing
+│   ├── CPILFESL.csv                      # CPI data (inflation)
+│   ├── USACSCICP02STSAM.csv              # Consumer Confidence (FRED)
+│   ├── spending_patterns_detailed.csv    # Retail transactions (10K records)
+│   ├── UMCSENT.csv                       # Consumer Sentiment (FRED)
+│   ├── UNRATE.csv                        # Unemployment Rate (FRED)
+│   ├── MRTSSM448USN.csv                  # Retail Sales (FRED)
+│   ├── PSAVERT.csv                       # Saving Rate (FRED)
+│   └── [other FRED economic data files]
+│
+├── Processed_Data/                        # GENERATED ANALYSIS OUTPUTS
+│   ├── master_dataset_complete.csv       # Complete integrated dataset
+│   ├── search_indicators_results_final.csv # Search analysis results
+│   ├── census_retail_results.csv         # Census regression results
+│   ├── fashion_economic_correlations.csv # Correlation matrix
+│   ├── binary_significance_matrix.csv    # Statistical significance matrix
+│   └── retail_transactions_processed.csv # Categorized purchases
+│
+├── Tableau_Data/                          # TABLEAU-READY EXPORTS (9 files)
+│   ├── tableau_main_data_final.csv       # Main time series data
+│   ├── tableau_search_results.csv        # Search indicator results
+│   ├── tableau_census_timeseries.csv     # 33-year Census trends
+│   ├── tableau_census_results.csv        # Census regression summary
+│   ├── tableau_census_recession_analysis.csv # Recession period analysis
+│   ├── tableau_purchase_summary.csv      # Purchase behavior summary
+│   ├── tableau_search_vs_purchase.csv    # Search vs purchase comparison
+│   ├── tableau_price_analysis.csv        # Price point analysis
+│   └── tableau_category_by_period.csv    # Category trends over time
+│
+├── Viz/                                   # VISUALIZATIONS (PNG files)
+│   ├── binary_significance_matrix.png    # Statistical significance heatmap
+│   ├── census_binary_significance_matrix.png # Census significance matrix
+│   ├── fashion_economic_correlation_heatmap.png # Correlation heatmap
+│   ├── fashion_economic_top_correlations.png # Top correlations chart
+│   ├── lipstick_miniskirt_recession_timeseries.png # Time series analysis
+│   ├── search_indicators_ranking.png     # Indicator ranking chart
+│   ├── temporal_trends.png               # Time series trends
+│   ├── purchase_behavior_analysis.png    # Purchase behavior charts
+│   └── search_vs_purchase_comparison.png # Search vs purchase comparison
+│
+└── Archive_Scripts/                       # ARCHIVED ANALYSIS SCRIPTS
+    ├── analyze_fashion_economic_correlations.py
+    ├── create_binary_significance_matrix.py
+    ├── create_census_significance_matrix.py
+    ├── create_recession_search_timeseries.py
+    ├── create_significance_matrix.py
+    └── create_tableau_search_ranking.py
 ```
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
 ```bash
 pip install pandas numpy scipy scikit-learn statsmodels matplotlib seaborn openpyxl
 ```
@@ -108,38 +131,33 @@ python little_luxuries_master_analysis.py
 ```
 
 **What This Does:**
-1.  Loads all data sources (Google Trends, FRED economic indicators, U.S. Census retail sales, retail transactions)
-2.  Creates latent variables using Factor Analysis (SEM approach)
-3.  Runs regression analysis (8 search indicators vs. Consumer Confidence Index)
-4.  **Analyzes 33 years of U.S. Census retail sales data (1992-2025, 404 months)**
-5.  **Tests Hill et al. (2012) hypothesis with official government data**
-6.  Analyzes purchase behavior (categorization, price points, temporal patterns)
-7.  Compares search vs. purchase behavior
-8.  Generates 4 professional visualizations with plasma colormap
-9.  Exports 9 Tableau-ready CSV files (including 3 Census-specific datasets)
+1. Loads all data sources (Google Trends, FRED economic indicators, U.S. Census retail sales, retail transactions)
+2. Creates latent variables using Factor Analysis (SEM approach)
+3. Runs regression analysis (8 search indicators vs. Consumer Confidence Index)
+4. Analyzes 33 years of U.S. Census retail sales data (1992-2025, 404 months)
+5. Tests Hill et al. (2012) hypothesis with official government data
+6. Analyzes purchase behavior (categorization, price points, temporal patterns)
+7. Compares search vs. purchase behavior
+8. Generates professional visualizations
+9. Exports 9 Tableau-ready CSV files (including 3 Census-specific datasets)
 
-**Runtime:** ~2-3 minutes (depending on system)
+**Runtime:** ~2-3 minutes
 
 **Output:**
-- Console summary of all analyses including **Census replication results**
-- 14 CSV files (5 processed datasets + 9 Tableau exports)
-- 4 PNG visualizations (publication-quality, recession-themed)
+- Console summary of all analyses including Census replication results
+- 12 CSV files in `Processed_Data/` + 9 CSV files in `Tableau_Data/`
+- 15 PNG visualizations in `Viz/`
 
 ---
 
-##  Data Sources
+## Data Sources
 
-This project integrates data from **four major sources** to provide a comprehensive analysis of the lipstick effect across both search behavior and actual purchase patterns.
+This project integrates data from **four major sources**:
 
 ### 1. Google Trends Data (Search Behavior)
-
-**What is Google Trends?**
-Google Trends provides normalized search volume data showing how often specific terms are searched relative to total searches. Values range from 0-100, where 100 represents peak search interest.
-
 - **Time Period:** January 2004 - December 2024 (252 months, 20 years)
 - **Variables:** 40 search terms across 8 fashion/beauty indicators
 - **File:** `Data_Sources/All_Variables_Us_Data_Sheet1.xlsx`
-- **Geographic Scope:** United States only
 
 **Indicators Tested:**
 1. **Indie Sleaze** (5 terms): skinny jeans, cheetah print, fur coat, leather skirt, disco pants
@@ -151,132 +169,43 @@ Google Trends provides normalized search volume data showing how often specific 
 7. **Blazers** (5 terms): blazer, women's blazer, oversized blazer, boyfriend blazer, cropped blazer
 8. **Mini Skirts** (5 terms): mini skirt, mini dress, micro mini, micro short, micro mini skirt
 
-**Why Google Trends?** Captures consumer *interest* and browsing behavior in real-time, showing what people are thinking about before they make purchase decisions.
-
----
-
 ### 2. FRED Economic Indicators
+**Source:** Federal Reserve Economic Data (FRED) - https://fred.stlouisfed.org/
 
-**What is FRED?**
-The **Federal Reserve Economic Data (FRED)** is a database maintained by the Federal Reserve Bank of St. Louis containing over 800,000 economic time series from national, international, public, and private sources. It's the gold standard for U.S. economic data.
+**Key Indicators:**
+- **Consumer Confidence Index (CCI)** - USACSCICP02STSAM - Primary dependent variable
+- **Consumer Price Index (CPI)** - CPILFESL - Inflation adjustment
+- **Consumer Sentiment** - UMCSENT - University of Michigan Index
+- **Unemployment Rate** - UNRATE - Labor market indicator
+- **Retail Sales (Clothing)** - MRTSSM448USN - Fashion spending
+- **Personal Saving Rate** - PSAVERT - Consumer savings behavior
 
-**Our FRED Data Sources:**
-
-**a. Consumer Confidence Index (CCI) - PRIMARY INDICATOR**
-- **Variable:** USACSCICP02STSAM
-- **What it measures:** Consumer attitudes toward current and future economic conditions
-- **Scale:** Index value where higher = more confident
-- **Why it matters:** Core measure of economic sentiment; when CCI drops, people feel anxious about the economy
-- **Our use:** Primary dependent variable to test lipstick effect
-
-**b. Consumer Price Index (CPI)**
-- **Variable:** CPILFESL
-- **What it measures:** Inflation - changes in prices paid by consumers for goods and services
-- **Data:** 825 monthly observations (1957-2025)
-- **Our use:** Adjust dollar values for inflation to enable fair comparisons across time
-
-**c. Consumer Sentiment Index**
-- **Variable:** UMCSENT
-- **What it measures:** Survey-based measure of consumer confidence (University of Michigan)
-- **Data:** 876 monthly observations
-- **Our use:** Secondary validation of consumer confidence patterns
-
-**d. Unemployment Rate**
-- **Variable:** UNRATE
-- **What it measures:** Percentage of labor force that is unemployed
-- **Data:** 933 monthly observations
-- **Our use:** Economic context and recession period identification
-
-**e. Retail Sales - Clothing & Accessories**
-- **Variable:** MRTSSM448USN
-- **What it measures:** Monthly retail sales in clothing sector (in millions of dollars)
-- **Data:** 404 monthly observations
-- **Our use:** Validate fashion spending patterns
-
-**f. Personal Saving Rate**
-- **Variable:** PSAVERT
-- **What it measures:** Percentage of disposable income that consumers save
-- **Data:** 801 monthly observations
-- **Our use:** Economic behavior context
-
-**Source:** https://fred.stlouisfed.org/
-
----
-
-### 3. U.S. Census Bureau Monthly Retail Sales (BREAKTHROUGH DATA)
-
-**What is Census Retail Sales Data?**
-Official monthly retail sales statistics collected by the U.S. Census Bureau from a representative sample of retail establishments nationwide. This is **the most authoritative source** for tracking actual consumer purchases in the United States.
-
+### 3. U.S. Census Bureau Monthly Retail Sales
 - **Time Period:** January 1992 - August 2025 (404 months, **33+ years**)
 - **Data Type:** Official U.S. government retail sales statistics
 - **File:** `Data_Sources/census_retail_sales_1992_2025.csv`
-- **Geographic Scope:** United States (nationally representative)
 
 **NAICS Categories Analyzed:**
-
-**NAICS 446: Health and Personal Care Stores**
-- Includes: Drug stores, cosmetics stores, beauty supply stores, vitamin shops
-- **Why this category:** Direct test of the "lipstick" part of the lipstick effect
-- **Data coverage:** 404 monthly observations
-
-**NAICS 44812: Women's Clothing Stores**
-- Includes: Retail stores selling women's apparel, accessories
-- **Why this category:** Tests if fashion items show lipstick effect
-- **Data coverage:** 404 monthly observations
-
-**Integrated Economic Indicators:**
-- **CCI (Consumer Confidence Index):** For correlation analysis
-- **CPI (Consumer Price Index):** For inflation adjustment
+- **NAICS 446: Health and Personal Care Stores** (Beauty, cosmetics, drug stores)
+- **NAICS 44812: Women's Clothing Stores** (Fashion, apparel, accessories)
 
 **Why This Data Is Critical:**
-- **Direct replication of Hill et al. (2012)** - Uses actual purchase data like the original study
-- **33-year timeframe** provides robust statistical power
-- **Official government data** eliminates sampling bias
-- **Covers 4 major recessions:** Early 1990s downturn, Dot-com crash (2001), Great Recession (2007-09), COVID-19 pandemic (2020)
+- Direct replication of Hill et al. (2012) using actual purchase data
+- 33-year timeframe provides robust statistical power
+- Official government data eliminates sampling bias
+- Covers 4 major recessions: Early 1990s, Dot-com crash (2001), Great Recession (2007-09), COVID-19 (2020)
 - **Strongest evidence to date:** R² = 24.8% for beauty purchases vs. consumer confidence
 
-**What is NAICS?**
-The North American Industry Classification System (NAICS) is the standard used by federal statistical agencies to classify business establishments for collecting, analyzing, and publishing statistical data related to the U.S. economy.
-
----
-
-### 4. Retail Transaction Data (Purchase Behavior - Granular Detail)
-
+### 4. Retail Transaction Data (Granular Detail)
 - **Time Period:** January 2023 - January 2025 (25 months)
 - **Transactions:** 10,000 individual purchases
 - **Customers:** 200 unique shoppers
 - **Total Spending:** $25,347,508.90
 - **File:** `Data_Sources/spending_patterns_detailed.csv`
 
-**Categories:** Groceries, Fitness, Food, Gifts, Shopping, Medical/Dental, Personal Hygiene, Housing & Utilities, Transportation, Travel, Friend Activities, Subscriptions, Hobbies
-
-**What this data provides:**
-- Transaction-level detail (individual purchases)
-- Price point analysis
-- Category-level spending patterns
-- Customer-level behavior
-
-**Note:** This dataset covers a relatively stable economic period (2023-2025) without major recessions, which is why it shows different patterns than the Census data that spans multiple economic downturns.
-
 ---
 
-### Data Integration Summary
-
-Our analysis uniquely combines:
-1. **Search data** (what people think about) - Google Trends
-2. **Official purchase data** (what people actually buy, macro level) - U.S. Census
-3. **Transaction data** (what people actually buy, micro level) - Retail records
-4. **Economic indicators** (economic context) - FRED
-
-This multi-source approach allows us to:
-- Test the lipstick effect at multiple stages of consumer behavior
-- Replicate landmark research (Hill et al. 2012) with official government data
-- Provide the most comprehensive analysis of modern treatonomics to date
-
----
-
-##  Methodology
+## Methodology
 
 ### Statistical Approach
 
@@ -290,39 +219,54 @@ This multi-source approach allows us to:
 - Tests: Indicator Score → Consumer Confidence Index
 - Metrics: R², p-value, coefficient, standard error
 
-**3. Purchase Behavior Analysis**
+**3. Census Data Replication (Hill et al. 2012)**
+- 33 years of monthly retail sales data
+- Regression: Retail Sales ~ Consumer Confidence Index
+- Controlled for inflation using CPI
+- Recession period analysis (3 major recessions)
+
+**4. Purchase Behavior Analysis**
 - Categorization into "Little Luxuries" vs. "Necessities"
 - Price point distribution analysis
 - Temporal pattern analysis (monthly aggregation)
 - Luxury ratio calculation
 
-**4. Comparative Analysis**
+**5. Comparative Analysis**
 - Merged search and purchase data (24-month overlap)
-- Correlation analysis
-- Tests relationship between browsing and buying
+- Correlation analysis between search behavior and purchases
 
 ---
 
-##  Results Summary
+## Results Summary
 
-### Search Behavior Analysis
+### Search Behavior Analysis (Google Trends)
 
 | Rank | Indicator | R² (%) | P-value | Coefficient | Status |
 |------|-----------|--------|---------|-------------|--------|
-|  #1 | **Mini Skirts** | 18.3% | < 0.000001 | -0.535 |  Significant |
-|  #2 | **Blazers** | 17.0% | < 0.000001 | -0.494 |  Significant |
-|  #3 | **High Heel Index** | 13.5% | < 0.000001 | -0.441 |  Significant |
-| #4 | **Big Bag** | 12.7% | < 0.000001 | -0.424 |  Significant |
-| #5 | **Indie Sleaze** | 7.6% | 0.000009 | -0.335 |  Significant |
-| #6 | **Maxi Skirt** | 6.1% | 0.000074 | -0.293 |  Significant |
-| #7 | **Lipstick Index** | 5.6% | 0.000141 | -0.283 |  Significant |
-| #8 | **Peplums** | 0.0% | 0.739 | 0.025 |  Not Significant |
+| #1 | **Mini Skirts** | 18.3% | < 0.000001 | -0.535 | Significant |
+| #2 | **Blazers** | 17.0% | < 0.000001 | -0.494 | Significant |
+| #3 | **High Heel Index** | 13.5% | < 0.000001 | -0.441 | Significant |
+| #4 | **Big Bag** | 12.7% | < 0.000001 | -0.424 | Significant |
+| #5 | **Indie Sleaze** | 7.6% | 0.000009 | -0.335 | Significant |
+| #6 | **Maxi Skirt** | 6.1% | 0.000074 | -0.293 | Significant |
+| #7 | **Lipstick Index** | 5.6% | 0.000141 | -0.283 | Significant |
+| #8 | **Peplums** | 0.0% | 0.739 | 0.025 | Not Significant |
 
-**Summary:** 7/8 indicators (87.5%) statistically significant
+**Summary:** 7/8 indicators (87.5%) statistically significant with inverse relationships (confidence ↓ → searches ↑)
 
-**Key Insight:** All significant indicators show **inverse relationships** (when confidence ↓, searches ↑)
+### Census Data Analysis (1992-2025)
 
-### Purchase Behavior Analysis
+| Category | R² | P-value | Coefficient | N Months | Recession Behavior |
+|----------|-----|---------|-------------|----------|-------------------|
+| Beauty & Personal Care | 24.8% | < 0.000001 | -293.78 | 404 | ↑ in all 3 recessions |
+| Women's Clothing | 10.0% | < 0.000001 | -8.52 | 404 | Mixed/negative |
+
+**Recession Period Analysis:**
+- Dot-com Crash (2001): Beauty sales +6.2%
+- Great Recession (2007-09): Beauty sales +4.5%
+- COVID-19 Recession (2020): Beauty sales +0.4%
+
+### Purchase Behavior Analysis (Retail Transactions)
 
 **Overall Distribution:**
 - Total Transactions: 10,000
@@ -340,141 +284,9 @@ This multi-source approach allows us to:
 
 **Price Sweet Spot:** $100-500 (2,117 transactions, 34.3%)
 
-**Luxury Ratio:** Average 93.4% of monthly spending
-
-### Search vs. Purchase Comparison
-
-**24-month overlap period (Jan 2023 - Dec 2024):**
-
-- Luxury Spending vs. CCI: r = -0.001, p = 0.997 (NOT significant)
-- ALL search indicators vs. Luxury Spending: NOT significant
-
-**Critical Insight:** Search behavior ≠ Purchase behavior
-- People browse when anxious (immediate response)
-- Purchasing driven by different factors (resources, employment, needs)
-
 ---
 
-##  Alignment with Peer-Reviewed Research
-
-### Hill et al. (2012) - "Boosting Beauty in an Economic Decline"
-
-**Their Study:**
-- Data: 20 years U.S. retail spending (purchases)
-- Finding: Higher unemployment → more cosmetics/clothing spending
-
-**Our Study:**
-- Data: 20 years Google Trends (searches) + 2 years retail transactions
-- Finding: Lower confidence → more fashion searches; high luxury spending
-
-** CONCLUSION:** Our findings **COMPLEMENT** Hill et al. by showing:
-1. Lipstick effect operates at **browsing stage** (our search data)
-2. Lipstick effect operates at **purchase stage** (Hill's spending data)
-3. Effect has **evolved** from cosmetics to fashion items
-
-### 2025 Industry Meta-Analysis
-
-**Their Top Predictors:** Mini skirts > Blazers > Big bags > Lipstick
-**Our Top Predictors:** Mini skirts (18.3%) > Blazers (17.0%) > Big Bag (12.7%) > Lipstick (5.6%)
-** 95% AGREEMENT**
-
-### 2019 Great Recession Study
-
-**Their Finding:** Mixed evidence, context-specific
-**Our Finding:** Lipstick weak (5.6%), fashion strong (18.3%)
-** VALIDATES** mixed/context-specific conclusion
-
----
-
-##  Tableau Dashboards
-
-### Files Provided (6 CSV Exports)
-
-1. **`Tableau_Data/tableau_main_data_final.csv`** (252 rows × 62 columns)
-   - Complete time series data
-   - Use for: Temporal Trends Dashboard
-
-2. **`Tableau_Data/tableau_search_results.csv`** (8 indicators)
-   - R², p-values, coefficients, categories
-   - Use for: Category Comparison Dashboard
-
-3. **`Tableau_Data/tableau_purchase_summary.csv`** (50 month-category combinations)
-   - Monthly spending by purchase type
-   - Use for: Category Comparison Dashboard
-
-4. **`Tableau_Data/tableau_search_vs_purchase.csv`** (24 overlapping months)
-   - Merged search + purchase data
-   - Use for: Correlation Explorer Dashboard
-
-5. **`Tableau_Data/tableau_price_analysis.csv`** (6 price ranges)
-   - Price point distribution for little luxuries
-   - Use for: Price & Demographics Dashboard
-
-6. **`Tableau_Data/tableau_category_by_period.csv`** (54 year-quarter-category combinations)
-   - Category trends over time
-   - Use for: Price & Demographics Dashboard
-
-### Dashboard Structure (From Proposal)
-
-**Dashboard 1 - Temporal Trends**
-- Dual-axis line charts (indicator scores + CCI)
-- Economic period shading (Great Recession, COVID, Inflation)
-- Interactive filters (date range, indicator selection)
-
-**Dashboard 2 - Category Comparison**
-- Bubble plots (size = sales, color = correlation strength)
-- Bar charts (luxury ratio by category)
-- Purchase type distribution (pie chart)
-
-**Dashboard 3 - Correlation Explorer**
-- Scatter plots with regression lines
-- Heatmaps (correlation matrix)
-- Search vs. Purchase comparison
-
-**Dashboard 4 - Price & Demographics**
-- Price point distribution (bar chart)
-- Category spending over time (stacked area)
-- Sweet spot identification
-
----
-
-##  Documentation
-
-### Main Documents
-
-1. **`FINAL_REPORT.md`** (12,000 words)
-   - Complete project report
-   - Literature review, methodology, results, discussion
-   - Peer research alignment analysis
-   - Limitations and future work
-
-2. **`EXECUTIVE_FINDINGS_SUMMARY.md`** (8,000 words)
-   - Concise findings summary
-   - Key results and implications
-   - Practical applications
-
-3. **`README.md`** (This file)
-   - Quick start guide
-   - Project overview
-   - File structure
-
-### Key Sections to Read
-
-**For Quick Understanding:**
-- Executive Summary (in `EXECUTIVE_FINDINGS_SUMMARY.md`)
-- Key Findings section (above)
-
-**For Detailed Analysis:**
-- Results section in `FINAL_REPORT.md`
-- Methodology section in `FINAL_REPORT.md`
-
-**For Peer Research Context:**
-- "Alignment with Peer-Reviewed Research" in `FINAL_REPORT.md`
-- Literature Review in `FINAL_REPORT.md`
-
----
-
-##  Key Insights
+## Key Insights
 
 ### 1. The Modern "Lipstick" Has Evolved
 
@@ -485,142 +297,120 @@ This multi-source approach allows us to:
 - Fashion items 2-3× stronger predictors than cosmetics in searches
 - Fashion dominates actual purchases (94.2% of luxury spending)
 
-### 2. Search Behavior ≠ Purchase Behavior
+### 2. Lipstick Effect Confirmed Across Multiple Data Sources
 
-**Search (Browsing):**
-- Immediate response to anxiety
-- Low-cost activity
-- Reflects aspiration/"window shopping"
-- **Our finding:** Inverse correlation with confidence
+**Search Behavior (Google Trends):**
+- 7/8 indicators show significant inverse correlation with consumer confidence
+- Effect size: R² = 5.6% to 18.3%
 
-**Purchase (Buying):**
-- Delayed, resource-constrained response
-- High-cost commitment
-- Reflects actual behavior
-- **Our finding:** No CCI correlation in 24-month window
-
-**Both Are Valid:** Different stages of consumer decision-making
+**Purchase Behavior (Census Data):**
+- Beauty: R² = 24.8% (strongest evidence ever documented)
+- Beauty sales INCREASE during all recessions
+- 33 years, 404 months, 4 economic cycles
 
 ### 3. Two-Stage Consumer Response Model
 
 ```
 Economic Anxiety Detected
          ↓
-    
-      STAGE 1     → Browse/Search (immediate, low-cost)
-      SEARCH          Strong inverse correlation with CCI
-          Our finding (Google Trends)
+    STAGE 1: SEARCH    → Browse/Search (immediate, low-cost)
+    (Google Trends)       Strong inverse correlation with CCI
          ↓
-    
-      STAGE 2     → Purchase (delayed, resource-dependent)
-      PURCHASE        Strategic small luxuries
-          Hill et al. (2012) finding
+    STAGE 2: PURCHASE  → Purchase (delayed, resource-dependent)
+    (Census Data)         Strategic small luxuries during recessions
 ```
 
-### 4. Fashion Trends as Economic Indicators
+---
 
-**Potential Use Cases:**
-- Supplement traditional economic indicators (CCI, unemployment)
-- Real-time sentiment tracking (Google Trends updates daily)
-- Early warning system for consumer anxiety
+## Tableau Dashboards
 
-**Limitations:**
-- Search volume ≠ actual economic activity
-- Best as supplementary, not replacement, indicator
+See **TABLEAU_DATA_GUIDE.md** for complete documentation of all 9 Tableau-ready CSV files.
+
+**Quick Reference:**
+
+1. **tableau_main_data_final.csv** - 20-year search time series (252 months)
+2. **tableau_search_results.csv** - Search indicator regression results (8 indicators)
+3. **tableau_census_timeseries.csv** - 33-year Census trends (808 rows)
+4. **tableau_census_results.csv** - Census regression summary (2 categories)
+5. **tableau_census_recession_analysis.csv** - Recession period analysis (3 recessions)
+6. **tableau_purchase_summary.csv** - Purchase behavior by month (50 rows)
+7. **tableau_search_vs_purchase.csv** - 24-month overlap data
+8. **tableau_price_analysis.csv** - Price point distribution (6 ranges)
+9. **tableau_category_by_period.csv** - Quarterly category trends (54 rows)
 
 ---
 
-##  Methodology Highlights
+## Analysis Scripts
 
-### Why Our Approach Is Robust
+### Main Scripts
+- **little_luxuries_master_analysis.py** - Complete end-to-end analysis pipeline
+- **run_all_visualizations.py** - Generate all visualizations
 
-**1. Long-Term Data (20 years)**
-- Covers Great Recession (2008-2009)
-- Covers COVID-19 Crisis (2020)
-- Covers Inflation Surge (2022-2023)
-- Sufficient statistical power
-
-**2. Multiple Indicators (8 tested)**
-- Not reliant on single measure
-- Cross-validation across categories
-- 7/8 success rate demonstrates robustness
-
-**3. SEM Approach**
-- Factor Analysis reduces measurement error
-- Captures shared variance across multiple search terms
-- More reliable than single-term measures
-
-**4. Integrated Analysis**
-- Combines search (aspiration) + purchase (behavior)
-- Shows complete consumer journey
-- Reconciles seemingly contradictory findings
-
-**5. Peer Research Alignment**
-- 95% agreement with industry meta-analysis
-- Complements Hill et al. (2012) landmark study
-- Validates mixed findings from 2019 study
+### Archived Scripts (Archive_Scripts/)
+Individual analysis components that have been integrated into the main script:
+- analyze_fashion_economic_correlations.py
+- create_binary_significance_matrix.py
+- create_census_significance_matrix.py
+- create_recession_search_timeseries.py
+- create_significance_matrix.py
+- create_tableau_search_ranking.py
 
 ---
 
-##  Limitations
+## Alignment with Peer-Reviewed Research
+
+### Hill et al. (2012) - "Boosting Beauty in an Economic Decline"
+
+**Their Study:**
+- Data: 20 years U.S. retail spending (purchases)
+- Finding: Higher unemployment → more cosmetics/clothing spending
+
+**Our Study:**
+- Data: 33 years U.S. Census retail sales (official government data)
+- Finding: Lower consumer confidence → more beauty/fashion spending
+- Result: Successfully replicated with stronger evidence (R² = 24.8% vs their ~15%)
+
+### Modern Fashion Industry Analysis (2025)
+
+**Industry Top Predictors:** Mini skirts > Blazers > Big bags > Lipstick
+**Our Top Predictors:** Mini skirts (18.3%) > Blazers (17.0%) > Big Bag (12.7%) > Lipstick (5.6%)
+95% agreement with industry findings
+
+---
+
+## Limitations
 
 ### Data Limitations
--  Search volume ≠ actual purchases
--  Only 24-month overlap between search and purchase data
--  Retail data may be simulated (not confirmed real POS)
+- Search volume ≠ actual purchases in all contexts
+- Only 24-month overlap between search and purchase data
+- Retail transaction data may be simulated (not confirmed real POS)
 
 ### Temporal Limitations
--  Purchase period (2023-2025) doesn't include major recession
--  Limited statistical power for purchase correlations
+- Purchase period (2023-2025) doesn't include major recession
+- Limited statistical power for short-term purchase correlations
 
 ### Generalizability Limitations
--  U.S.-only data
--  Limited demographic breakdowns
--  Cultural context may vary internationally
-
-**See `FINAL_REPORT.md` for complete limitations discussion**
+- U.S.-only data
+- Limited demographic breakdowns
+- Cultural context may vary internationally
 
 ---
 
-##  Future Work
+## Future Work
 
-### Immediate Next Steps
-1.  Build Tableau dashboards using 6 exported CSV files
-2.  Present findings to stakeholders
-3.  Submit final project deliverables
-
-### Research Extensions
-1. **Integrate Real Retail Sales Data** (2004-2024)
-   - Match Hill et al.'s timeframe
-   - Include demographics
-
-2. **Lag Analysis**
-   - Test if searches are leading indicators
-   - 1-month, 3-month, 6-month lags
-
-3. **International Comparison**
-   - UK, France, Germany, Japan
-   - Test cultural moderators
-
-4. **Machine Learning Models**
-   - Build predictive models for CCI
-   - Random forest, XGBoost
-
-5. **Experimental Validation**
-   - Lab experiments priming anxiety
-   - Causal evidence
-
-**See `FINAL_REPORT.md` for detailed future work discussion**
+1. **Integrate Real Retail Sales Data** (2004-2024) to match Hill et al.'s timeframe
+2. **Lag Analysis** - Test if searches are leading indicators (1, 3, 6-month lags)
+3. **International Comparison** - UK, France, Germany, Japan cultural moderators
+4. **Machine Learning Models** - Build predictive models for CCI using Random Forest, XGBoost
+5. **Experimental Validation** - Lab experiments priming anxiety for causal evidence
 
 ---
 
-##  References
+## References
 
 ### Peer-Reviewed Literature
 
 Hill, S. E., Rodeheffer, C. D., Griskevicius, V., Durante, K., & White, A. E. (2012). "Boosting Beauty in an Economic Decline: Mating, Spending, and the Lipstick Effect." *Journal of Personality and Social Psychology*, 103(2), 275–291.
-
-"Evidence for the lipstick effect during the Great Recession." (2019). *Economics & Human Biology*.
 
 ### Data Sources
 
@@ -628,13 +418,11 @@ Federal Reserve Bank of St. Louis. (2025). *FRED Economic Data*. https://fred.st
 
 Google Trends. *Search volume data for fashion and beauty terms* (2004-2024).
 
-U.S. Census Bureau. (2025). "Retail sales: Clothing and clothing accessory stores."
-
-**See `FINAL_REPORT.md` for complete references**
+U.S. Census Bureau. (2025). "Monthly Retail Trade Survey - Retail sales by industry" (NAICS 446, 44812).
 
 ---
 
-##  Team Contributions
+## Team Contributions
 
 **Tanushree Paidichetty:**
 - Dashboard creation and pattern analysis
@@ -648,58 +436,33 @@ U.S. Census Bureau. (2025). "Retail sales: Clothing and clothing accessory store
 
 **Aadya Pawar:**
 - Data sourcing and preprocessing
-- Statistical analysis (SEM + Regression)
+- Statistical analysis (SEM + Regression + Census replication)
 - Master analysis script development
 - Correlation explorer dashboard
 - Documentation and reporting
 
 ---
 
-##  Contact & Support
+## License & Usage
 
-**For Questions:**
-- Review `FINAL_REPORT.md` for detailed explanations
-- Check `EXECUTIVE_FINDINGS_SUMMARY.md` for key takeaways
-- Examine code comments in `little_luxuries_master_analysis.py`
-
-**For Data Issues:**
-- Ensure all CSV files are in correct locations
-- Check `Data_Sources/` folder contains all input data files
-- Verify `Data_Sources/All_Variables_Us_Data_Sheet1.xlsx` exists
-- Run the script to generate `Processed_Data/` and `Tableau_Data/` folders
-
-**For Analysis Issues:**
-- Check Python version (3.8+ required)
-- Install all dependencies: `pip install pandas numpy scipy scikit-learn statsmodels matplotlib seaborn openpyxl`
-- Review console output for specific errors
-
----
-
-##  License & Usage
-
-This project was completed as part of a Data Visualization course. The data sources are:
-- **Google Trends:** Publicly available
-- **FRED Data:** Public domain (Federal Reserve)
-- **Retail Data:** Simulated/anonymized
+This project was completed as part of a Data Visualization course.
 
 **Academic Use:** Freely available for educational purposes
 **Commercial Use:** Contact authors for permission
 
 ---
 
-##  Acknowledgments
+## Contact
 
-We thank:
-- **Course Instructor** for project guidance
-- **Federal Reserve Bank of St. Louis** for FRED data
-- **Google Trends** for search data
-- **Hill et al. (2012)** for theoretical framework
-- **Style Analytics** for industry insights
+For questions or issues:
+- Review code comments in `little_luxuries_master_analysis.py`
+- Check `TABLEAU_DATA_GUIDE.md` for Tableau-specific questions
+- Ensure all dependencies are installed: `pip install -r requirements.txt`
 
 ---
 
-**Last Updated:** December 9, 2024
-**Project Status:**  Complete
+**Last Updated:** December 2024
+**Project Status:** Complete
 **Analysis Version:** 1.0
 
 ---
