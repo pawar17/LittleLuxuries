@@ -440,31 +440,8 @@ U.S. Census Bureau. (2025). "Monthly Retail Trade Survey - Retail sales by indus
 - Master analysis script development
 - Correlation explorer dashboard
 - Documentation and reporting
-
----
-
-## License & Usage
-
-This project was completed as part of a Data Visualization course.
-
-**Academic Use:** Freely available for educational purposes
-**Commercial Use:** Contact authors for permission
-
----
-
-## Contact
-
-For questions or issues:
-- Review code comments in `little_luxuries_master_analysis.py`
-- Check `TABLEAU_DATA_GUIDE.md` for Tableau-specific questions
-- Ensure all dependencies are installed: `pip install -r requirements.txt`
-
 ---
 
 **Last Updated:** December 2024
 **Project Status:** Complete
 **Analysis Version:** 1.0
-
----
-
-*"The 'lipstick effect' exists in 2024, but the modern 'lipstick' is not lipstick—it's mini skirts, blazers, and designer bags."*
