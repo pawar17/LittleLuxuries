@@ -7,7 +7,8 @@
 [![Data](https://img.shields.io/badge/Data-33%20Years-informational.svg)]()
 
 ---
-
+## Tableau Visualization: 
+https://public.tableau.com/views/LittleLuxuries-Fashionasarecessionindicator/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
 ## Project Overview
 
 This project investigates the **"lipstick effect"** and modern **"treatonomics"** phenomenon—the consumer behavior pattern where individuals continue purchasing small indulgences during economic uncertainty while cutting back on major expenses.
